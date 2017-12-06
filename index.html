@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Hello There!</title>
 </head>
-<body>
-    
+<body ng-app = "">
+    <section ng-controller="AuthCtrl"></section>
+
+
+
+    <!-- Scripts Begin: -->
+    <!-- Scripts are assigned in a specific order: Angular, Angular Routing, App.js, Factories, and Controllers -->
+    <!-- Require the Angular script-->
+        <script src="./lib/node_modules/angular/angular.min.js"></script>
+        <script src="./app/app.js"></script>
+        
+    <!--  scripts for "Authrorization"in the app/auth folder -->
+    <script src="./app/auth/factories/AuthFactory.js"></script>
+    <script src="./app/auth/controllers/AuthCtrl.js"></script>
 </body>
 </html>
