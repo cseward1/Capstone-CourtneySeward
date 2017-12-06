@@ -1,4 +1,4 @@
-angular.module("EmployeeApp")
+angular.module("CapstoneApp")
 .controller("AuthCtrl", function($scope, $location, AuthFactory) {
     $scope.auth = {}
 
@@ -21,3 +21,4 @@ angular.module("EmployeeApp")
     }
     
 })
+

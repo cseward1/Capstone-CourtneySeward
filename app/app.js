@@ -1,1 +1,1 @@
-angular.module("EmployeeApp", ["ngRoute"])
+angular.module("CapstoneApp", [])

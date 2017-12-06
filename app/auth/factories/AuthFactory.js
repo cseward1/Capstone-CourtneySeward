@@ -1,4 +1,4 @@
-angular.module("EmployeeApp")
+angular.module("CapstoneApp")
 .factory("AuthFactory", function ($http, $timeout, $location, $route) {
     let currentUserData = null
 
@@ -6,13 +6,13 @@ angular.module("EmployeeApp")
         if (user) {
             currentUserData = user
 
-            if ($location.url() !== "/employees/list") {
-                $timeout(function () {
-                    $location.url("/employees/list")
-                }, 100)
-            } else {
+            // if ($location.url() !== "/employees/list") {
+            //     $timeout(function () {
+            //         $location.url("/employees/list")
+            //     }, 100)
+            // } else {
                 $route.reload()
-            }
+            // }
 
         } else {
             currentUserData = null
