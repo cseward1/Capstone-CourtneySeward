@@ -1,3 +1,5 @@
+// Factory for the Register or Login Page:
+
 angular.module("CapstoneApp")
 .factory("AuthFactory", function ($http, $timeout, $location, $route) {
     let currentUserData = null
@@ -8,10 +10,9 @@ angular.module("CapstoneApp")
             
             // after i log in it is taking me to the Homepage
             // this code when you refresh will keep you on the home page after logged in
-
             if ($location.url() !== "/HomePageInformation/homePage") {
                 $timeout(function () {
-                    $location.url("/HomePageInformation/homePage")
+                    // $location.url("/HomePageInformation/homePage")
                 }, 100)
             } else {
                 $route.reload()
