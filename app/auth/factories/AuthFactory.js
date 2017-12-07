@@ -5,7 +5,7 @@ angular.module("CapstoneApp")
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             currentUserData = user
-
+// this code when you refresh will keep you on the same page
             // if ($location.url() !== "/employees/list") {
             //     $timeout(function () {
             //         $location.url("/employees/list")

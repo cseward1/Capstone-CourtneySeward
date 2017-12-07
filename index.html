@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,34 @@
     <title>Hello There!</title>
 </head>
 <!-- initiate Angular -->
-<body ng-app = "CapstoneApp">
+<body ng-app="CapstoneApp">
 
-        <div ng-view></div>
-   
+    <!-- creating a a log out button -->
+    <!-- keep the logout button above the view so it will always display -->
+    <nav ng-controller="AuthCtrl">
+        <button ng-click="logoutUser()">Logout</button>
+    </nav>
+
+    <div ng-view></div>
+
 
 
 
     <!-- Scripts Begin: -->
     <!-- Scripts are assigned in a specific order: Angular, Angular Routing, App.js, Factories, and Controllers -->
+
     <!-- Require the Angular script-->
-        <script src="./lib/node_modules/angular/angular.min.js"></script>
-        <script src="./app/app.js"></script>
-        
-    <!--  scripts for "Authrorization"in the app/auth folder -->
+    <script src="./lib/node_modules/angular/angular.min.js"></script>
+    <!-- Require the Firebase Script -->
+    <script src="./lib/node_modules/firebase/firebase.js"></script>
+    <script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/appConfig.js"></script>
+
+
+    <!--  scripts for "Authrorization" in the app/auth folder -->
     <script src="./app/auth/factories/AuthFactory.js"></script>
     <script src="./app/auth/controllers/AuthCtrl.js"></script>
 </body>
+
 </html>
