@@ -4,6 +4,7 @@ angular.module("CapstoneApp")
 
     $scope.logoutUser = function () {
         AuthFactory.logout()
+        // $location.url('')
         $location.url('/auth')
         console.log("You are now logged out, Goodbye!")
     }
@@ -11,7 +12,7 @@ angular.module("CapstoneApp")
     $scope.logMeIn = function () {
         AuthFactory.authenticate($scope.auth).then(function (didLogin) {
             $scope.login = {}
-            $location.url("/employees/list")
+            $location.url("/HomePageInformation/homePage")
             console.log("You are now logged in, Welcome!")
         })
     }
@@ -23,5 +24,3 @@ angular.module("CapstoneApp")
     }
     
 })
-
-// line 13 - "employee list" -  what would that translate into for me?

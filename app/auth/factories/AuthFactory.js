@@ -5,15 +5,17 @@ angular.module("CapstoneApp")
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             currentUserData = user
-            // after i log in it is taking me to the employyes list page that steve made. once I make the register form and the dahsboard page the i can insert those
-// this code when you refresh will keep you on the same page
-            // if ($location.url() !== "/employees/list") {
-            //     $timeout(function () {
-            //         $location.url("/employees/list")
-            //     }, 100)
-            // } else {
+            
+            // after i log in it is taking me to the Homepage
+            // this code when you refresh will keep you on the home page after logged in
+
+            if ($location.url() !== "/HomePageInformation/homePage") {
+                $timeout(function () {
+                    $location.url("/HomePageInformation/homePage")
+                }, 100)
+            } else {
                 $route.reload()
-            // }
+            }
 
         } else {
             currentUserData = null
