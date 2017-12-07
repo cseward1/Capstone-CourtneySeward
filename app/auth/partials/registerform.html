@@ -1,12 +1,11 @@
 <div>
-
     <h2>Registration Form</h2>
     <form>
-<!-- Parent Information: -->
+        <!-- Parent Information: -->
         <h4>Parent & Guardian Information:</h4>
         <div>
             <!-- make required -->
-            First name:
+            First Name:
             <input type="text">
         </div>
         <div>
@@ -14,13 +13,16 @@
             Last name:
             <input type="text">
         </div>
-<!-- Kid Information: -->
+
+        <!-- Kid Information: -->
         <h4>Register my Kids:</h4>
+        <!-- first Child -->
         <div>
             <!-- make required -->
             First name:
             <input type="text">
         </div>
+
         <div>
             <!-- make required -->
             Age:
@@ -56,53 +58,109 @@
                 <option value="Other">Other</option>
             </select>
         </div>
-       
-<!-- Add another child with hide and show: -->
-<div><button id="mybutton" ng-click="myvalue"=true>Click me</button>
-    <div>
-            <!-- make required -->
-            First name:
-            <input type="text">
+
+        <!-- Add another child with hide and show: -->
+        <br>
+        <!-- second child -->
+        <button id="mybutton" ng-click="myvalue=true">Add another Child?</button>
+        <br>
+        <div ng-show="myvalue">
+            <br>
+            <div>
+                <!-- make name required -->
+                First Name:
+                <input type="text">
+            </div>
+            <div>
+                <!-- make age required -->
+                Age:
+                <select name="age">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+            <div>
+                <!-- make gender required -->
+                Gender:
+                <select name="age">
+                    <option value=""></option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                </select>
+
+            </div>
+            <!-- third child  -->
+            <button id="mybutton" ng-click="my2ndvalue=true">Add another Child?</button>
+            <br>
+            <div ng-show="my2ndvalue">
+                <br>
+                <div>
+                    <!-- make name required -->
+                    First Name:
+                    <input type="text">
+                </div>
+                <div>
+                    <!-- make age required -->
+                    Age:
+                    <select name="age">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+                <div>
+                    <!-- make gender required -->
+                    Gender:
+                    <select name="age">
+                        <option value=""></option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                </div>
+            </div>
         </div>
-        <div>
-            <!-- make required -->
-            Age:
-            <select name="age">
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-            </select>
-        </div>
-        <div>
-            <!-- make required -->
-            Gender:
-            <select name="age">
-                <option value=""></option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-        
-</div>
+        <br>
 
 
-        <ng-click="RegisterInDatabase"button>Register My Family!</button>
+
+
+        <!-- Final Button to save the Data -->
+        <button ng-click="registerInDatabase()">Register My Family!</button>
     </form>
 </div>

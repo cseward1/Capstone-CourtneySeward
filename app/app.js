@@ -31,10 +31,11 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
         // Partial Call to pull up the registration form:
         .when("/register", {
             templateUrl: "app/auth/partials/registerform.html",
-            controller: "AuthCtrl",
+            controller: "RegisterCtrl",
             // resolve: { isAuth }
         })
-    
+
+
         // Partial call for connecting the home page to the Home page after a user logs in:
         .when("/HomePageInformation/homePage", {
             templateUrl: "app/HomePageInformation/homePage.html",
