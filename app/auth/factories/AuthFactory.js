@@ -5,6 +5,7 @@ angular.module("CapstoneApp")
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             currentUserData = user
+            // after i log in it is taking me to the employyes list page that steve made. once I make the register form and the dahsboard page the i can insert those
 // this code when you refresh will keep you on the same page
             // if ($location.url() !== "/employees/list") {
             //     $timeout(function () {

@@ -15,7 +15,8 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
      * Configure all Angular application routes here
      */
     $routeProvider
-    // /means you land on the first web page
+    // the "/" means you land on the first web page avliable or landing page
+    // insert the partial you are on and what controller you want to use for that page, the controller will house that factory
         .when("/", {
             // landing page
             templateUrl: "app/auth/partials/registerOrLogin.html",
