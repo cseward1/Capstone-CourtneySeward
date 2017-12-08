@@ -6,23 +6,23 @@ angular
             value: null,
             writable: true
         },
-        // "list": {
-        //     value: function () {
-        //         return $http({
-        //             method: "GET",
-        //             url: "https://angular-employees-6727b.firebaseio.com/employees/.json"
-        //         }).then(response => {
-        //             const data = response.data
+        "list": {
+            value: function () {
+                return $http({
+                    method: "GET",
+                    url: "https://capstone1-2f9f6.firebaseio.com/kids.json"
+                }).then(response => {
+                    const data = response.data
+// setting the key as a property called "id"
+                    this.cache = Object.keys(data).map(key => {
+                        data[key].id = key
+                        return data[key]
+                    })
 
-        //             this.cache = Object.keys(data).map(key => {
-        //                 data[key].id = key
-        //                 return data[key]
-        //             })
-
-        //             return this.cache
-        //         })
-        //     }
-        // },
+                    return this.cache
+                })
+            }
+        },
         // "single": {
         //     value: function (key) {
         //         return $http({
@@ -68,8 +68,8 @@ angular
             value: function (kid) {
                 return $http({
                     method: "POST",
-                    url: "https://kids-6aa11.firebaseio.com/kids/.json",
-                    data: kid
+                    url: "https://capstone1-2f9f6.firebaseio.com/",
+                    data: kids
                 })
             }
         }
