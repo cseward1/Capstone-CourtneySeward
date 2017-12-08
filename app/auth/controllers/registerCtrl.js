@@ -24,3 +24,6 @@ angular.module("CapstoneApp")
             console.log("You are now registered and at the home page, welcome!")
         }
     })
+
+    // grab the information from your form and call the add for kid 
+    // only controller that I have access to the kids info 

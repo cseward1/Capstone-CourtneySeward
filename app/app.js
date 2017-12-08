@@ -43,6 +43,26 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             // resolve: { isAuth }
         })
 
+                
+        // Routing Calls for the Buttons on the Home Page:
+        .when("/healthPage", {
+            templateUrl: "app/HomePageInformation/partials/healthPage.html",
+            controller: "healthCtrl",
+            // resolve: { isAuth }
+        })
+            // Routing call to display the Errands Page:
+        .when("/errandsPage", {
+            templateUrl: "app/HomePageInformation/partials/errands.html",
+            controller: "errandCtrl",
+            // resolve: { isAuth }
+        })
+        //     // Routing call to display the nanny LogPage:
+        .when("/nannyLogButton", {
+            templateUrl: "app/HomePageInformation/partials/nannyLog.html",
+            controller: "nannylogCtrl",
+            // resolve: { isAuth }
+        })
+
 
     // closing brackets below are for the function that chains the .when calls. House all of my ".when" calls within this function
 })

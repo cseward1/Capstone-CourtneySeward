@@ -69,11 +69,7 @@ angular
                 return $http({
                     method: "POST",
                     url: "https://kids-6aa11.firebaseio.com/kids/.json",
-                    data: {
-                        "firstName": kid.firstName,
-                        "age": kid.age,
-                        "gender": kid.gender
-                    }
+                    data: kid
                 })
             }
         }
