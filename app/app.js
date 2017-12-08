@@ -38,7 +38,7 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
 
         // Partial call for connecting the home page to the Home page after a user logs in:
         .when("/HomePageInformation/homePage", {
-            templateUrl: "app/HomePageInformation/homePage.html",
+            templateUrl: "app/HomePageInformation/partials/homePage.html",
             controller: "homePageCtrl",
             // resolve: { isAuth }
         })

@@ -3,7 +3,7 @@ angular.module("CapstoneApp")
 .controller("RegisterCtrl", function($scope, $location, AuthFactory) {
     // $scope.auth = {}
 
-    // HIDE AND SHOW FOR FORM:
+    // HIDE AND SHOW FOR THE FORM:
     // hide and show for second child form
           $scope.myvalue = false;
           $scope.showAlert = function(){
@@ -16,8 +16,7 @@ angular.module("CapstoneApp")
                 $scope.my2ndvalue = true;  
               };
 
-
-        // When the form is filled and saved the "click" event will route the user to the home page:
+     // When the form is filled and saved the "click" event will route the user to the home page:
         $scope.registerInDatabase = function(){   
             console.log("the registration form button is in fact working!")
             
