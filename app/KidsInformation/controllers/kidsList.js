@@ -1,6 +1,6 @@
 angular
 .module("CapstoneApp")
-.controller("KidCtrl", function (kidFactory, $scope) {
+.controller("kidsListCtrl", function (kidsFactory, $scope) {
     $scope.kids = []
 
     /**

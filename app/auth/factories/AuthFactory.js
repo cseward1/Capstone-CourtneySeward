@@ -13,7 +13,7 @@ angular.module("CapstoneApp")
             if ($location.url() !== "/HomePageInformation/homePage") {
                 $timeout(function () {
                     // $location.url("/HomePageInformation/homePage")
-                }, 100)
+                }, 500)
             } else {
                 $route.reload()
             }
@@ -23,7 +23,7 @@ angular.module("CapstoneApp")
             console.log("User is not authenticated")
             $timeout(function () {
                 $location.url("/auth")
-            }, 100)
+            }, 500)
         }
     })
 

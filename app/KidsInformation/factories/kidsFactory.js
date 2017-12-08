@@ -6,14 +6,20 @@ angular
             value: null,
             writable: true
         },
+        // authroize the user with Firebase-  that is why you are calling the token
         "list": {
             value: function () {
+                return firebase.auth().currentUser.getToken(true)
+                .then(idToken => {
                 return $http({
                     method: "GET",
-                    url: "https://capstone1-2f9f6.firebaseio.com/kids.json"
+                    url: `https://capstone1-2f9f6.firebaseio.com/kids/.json?auth=${idToken}`
+                    // url: "https://angular-employees-6727b.firebaseio.com/employees/.json"
+                })
                 }).then(response => {
                     const data = response.data
 // setting the key as a property called "id"
+                console.log(data)
                     this.cache = Object.keys(data).map(key => {
                         data[key].id = key
                         return data[key]
@@ -61,16 +67,25 @@ angular
         //         })
         //     }
         // },
+
+
+
         // Steps: make differnet posts that you view as collections
         // Simply put the information in Firebase into different collections
         // the collection below is the "kid(s) info collection"
         "add": {
             value: function (kid) {
-                return $http({
-                    method: "POST",
-                    url: "https://capstone1-2f9f6.firebaseio.com/",
-                    data: kids
-                })
+                return firebase.auth().currentUser.getToken(true)
+                    .then(idToken => {
+                        console.log(idToken)
+                        return $http({
+                            "url": `https://capstone1-2f9f6.firebaseio.com/kids/.json?auth=${idToken}`,
+                            "method": "POST",
+                            "data":kid
+                        })
+                    }).catch(function(error) {
+                        console.log(error)
+                    })
             }
         }
     })

@@ -1,6 +1,6 @@
 
 angular.module("CapstoneApp")
-.controller("RegisterCtrl", function($scope, $location, AuthFactory, kidsFactory) {
+.controller("RegisterCtrl", function($scope, $location, AuthFactory, kidsFactory, $timeout) {
     // $scope.auth = {}
 
     // HIDE AND SHOW FOR THE FORM:
@@ -23,15 +23,17 @@ angular.module("CapstoneApp")
             $location.url("/HomePageInformation/homePage")
             console.log("You are now registered and at the home page, welcome!")
         }
+
    
-// Create a ng-click event that listens for when the Save Button on the Reguister Form is clicked:
+// Do I need to call the a ng-click event that listens for when the Save Button on the Register Form is clicked:
 // Put where do I place it? 
-$scope. = function (saveChild(kid) {
-    console.log("You have saved the Child's information into Firebase!")
+$scope.newKid = {}
+
+$scope.saveChild = function (kid) {
+    kidsFactory.add(kid)
+    $location.url("/register")
+console.log("You have saved the Child's information into Firebase!")
 }
-
-
-
 
 // And then send that information to Firebase:
     // NEXT STEP: 
@@ -39,27 +41,21 @@ $scope. = function (saveChild(kid) {
     // only controller that I have access to the kids info 
     // Now let's Post to Firebase the Kid's information:
 
-        $scope.newKid = {}
+        
     
-        /**
-         * Use this event listener to check if there is any data
-         * in the factory cache each time the user loads a view
-         * that is bound to this controller
-         */
+    
+        // $timeout( () =>{
+        //     if (!kidsFactory.cache) {
+        //         console.info("No cached data")
+        //         kidsFactory.list(true).then(data => {
+        //             $scope.kids = data
+        //         })
+        //     } else {
+        //         console.info("Using cached data")
+        //         $scope.kids = kidsFactory.cache
+        //     }
+        // },200)
 
-        //  should line 48 be kid or kids tried kids the first time
-
-        $scope.$on('$viewContentLoaded', function(event) {
-            if (!kidsFactory.cache) {
-                console.info("No cached data")
-                kidsFactory.list(true).then(data => {
-                    $scope.kids = data
-                })
-            } else {
-                console.info("Using cached data")
-                $scope.kids = kidsFactory.cache
-            }
-        })
     
         $scope.addKid = function () {
             const kid = {
@@ -72,26 +68,36 @@ $scope. = function (saveChild(kid) {
             /**
              * Use the factory to POST to Firebase
              */
-            kidsFactory.add(kid).then(() => {
-                $scope.kid.firstName = ""
-                $scope.kid.age = ""
-                $scope.kid.Gender = ""
-            })
+            // kidsFactory.add(kid).then(() => {
+            //     $scope.kid.firstName = ""
+            //     $scope.kid.age = ""
+            //     $scope.kid.Gender = ""
+            // })
     
-            /**
-             * If POST was successful, retrieve new list of kids
-             */
-            .then(() => {
-                return kidsFactory.list()
-            })
+            // /**
+            //  * If POST was successful, retrieve new list of kids
+            //  */
+            // .then(() => {
+            //     return kidsFactory.list()
+            // })
     
             /**
              * Bind new list of kids to scope so view gets updated
              */
-            .then(kids => {
-                $scope.kids = kids
-            })
-        }
+            // .then(kids => {
+            //     $scope.kids = kids
+            // })
+         }
+       
     })
 
-    // call the function unto this controller
+
+
+// Notes:
+        /**
+         * Use this event listener to check if there is any data
+         * in the factory cache each time the user loads a view
+         * that is bound to this controller
+         */
+
+        //  should line 48 be kid or kids tried kids the first time

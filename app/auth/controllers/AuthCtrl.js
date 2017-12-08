@@ -24,7 +24,7 @@ angular.module("CapstoneApp")
       AuthFactory.registerWithEmail(registerNewUser).then(function (didRegister) {
         // $scope.logMeIn(registerNewUser)
         $location.url("/register")
-        console.log("You are now logged in, Welcome!")
+        console.log("You are now registered in, Welcome!")
       })
     }
     

@@ -34,16 +34,20 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             controller: "RegisterCtrl",
             // resolve: { isAuth }
         })
-
-
+        
+// Partial for when the "save Child" button is clicked
+        .when("/register", {
+            templateUrl: "app/auth/partials/registerform.html",
+            controller: "RegisterCtrl",
+            // resolve: { isAuth }
+        })
         // Partial call for connecting the home page to the Home page after a user logs in:
         .when("/HomePageInformation/homePage", {
             templateUrl: "app/HomePageInformation/partials/homePage.html",
             controller: "homePageCtrl",
             // resolve: { isAuth }
         })
-
-                
+        
         // Routing Calls for the Buttons on the Home Page:
         .when("/healthPage", {
             templateUrl: "app/HomePageInformation/partials/healthPage.html",
@@ -63,6 +67,14 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             // resolve: { isAuth }
         })
 
+
+        // // Routing call to display the kids information on the home page:
+        //      .when("/HomePageInformation/homePage", {
+        //         templateUrl: "app/HomePageInformation/partials/homePage.html",
+        //         controller: "registerCtrl",
+        //         // resolve: { isAuth }
+        //     })
+    
 
     // closing brackets below are for the function that chains the .when calls. House all of my ".when" calls within this function
 })

@@ -16,18 +16,18 @@
 </form>
         <!-- Kid Information: -->
         <h4>Your Child's Information:</h4>
-        <form ng-submit="addKid()">
+        <form>
         <!-- first Child -->
         <div>
             <!-- make required -->
             First name:
-            <input type="text" ng-model="newKid.firstName">
+            <input type="text" ng-model="kid.firstName">
         </div>
 
         <div>
             <!-- make required -->
             Age:
-            <select name="age" ng-model="newKid.age">
+            <select name="age" ng-model="kid.age">
                 <option value=""></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -52,7 +52,7 @@
         <div>
             <!-- make required -->
             Gender:
-            <select name="gender" ng-model="newKid.gender">
+            <select name="gender" ng-model="kid.gender">
                 <option value=""></option>
                 <option value="Female">Female</option>
                 <option value="Male">Male</option>
