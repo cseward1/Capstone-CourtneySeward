@@ -16,11 +16,11 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
     $routeProvider
 
         // Overall Notes about the "App.js" file:
-            // the "/" means you land on the landing page
-            // insert the partial you want to display and what controller you want to use for that page . 
-            // The controller file will house the specfic factory you need.
+            // the "/" displays what you will see on the end of the URL
+            // the Template URL: is where you insert the partial you want to display and what controller you want to use for that page 
+            // The controller file will house the specfic factory you need
 
-        // Partial call for the login page to log in anf log out succesfully:
+        // Partial call for the login page to log in and log out succesfully:
         .when("/auth", {
             // this ".when" is for displaying login and logout pages correctly:
             templateUrl: "app/auth/partials/registerOrLogin.html",
@@ -34,7 +34,7 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             controller: "RegisterCtrl",
             // resolve: { isAuth }
         })
-        
+
 // Partial for when the "save Child" button is clicked
         .when("/register", {
             templateUrl: "app/auth/partials/registerform.html",
@@ -67,13 +67,12 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             // resolve: { isAuth }
         })
 
-
-        // // Routing call to display the kids information on the home page:
-        //      .when("/HomePageInformation/homePage", {
-        //         templateUrl: "app/HomePageInformation/partials/homePage.html",
-        //         controller: "registerCtrl",
-        //         // resolve: { isAuth }
-        //     })
+        // Routing call to display the kids information on the home page:
+             .when("/HomePageInformation/homePage", {
+                templateUrl: "app/HomePageInformation/partials/homePage.html",
+                controller: "RegisterCtrl",
+                // resolve: { isAuth }
+            })
     
 
     // closing brackets below are for the function that chains the .when calls. House all of my ".when" calls within this function

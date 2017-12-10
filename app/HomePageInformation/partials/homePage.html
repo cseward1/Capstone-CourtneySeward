@@ -11,5 +11,12 @@
     <button ng-click="errandsButton()">Errands for the Day!</button>
     <!-- Nanny log button -->
     <button ng-click="nannyLogButton()">Daily Nanny Log!</button>
+</div>
+<div>
+    <h4> Family Info...</h4>
+    <div ng-repeat="kid in kids">
+       <strong>Name:</strong> {{ kid.firstName }} <br>
+       <strong>Age:</strong>{{ kid.age }} <br>
+       <strong>Gender:</strong>{{ kid.gender }}
 
 </div>

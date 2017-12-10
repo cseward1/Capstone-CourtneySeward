@@ -14,7 +14,6 @@ angular
                             return $http({
                                 method: "GET",
                                 url: `https://capstone1-2f9f6.firebaseio.com/kids/.json?auth=${idToken}`
-                                // url: "https://angular-employees-6727b.firebaseio.com/employees/.json"
                             })
                         }).then(response => {
                             const data = response.data
@@ -28,16 +27,18 @@ angular
                         })
                 }
             },
-            // "single": {
-            //     value: function (key) {
-            //         return $http({
-            //             method: "GET",
-            //             url: `https://angular-employees-6727b.firebaseio.com/employees/${key}/.json`
-            //         }).then(response => {
-            //             return response.data
-            //         })
-            //     }
-            // },
+
+            // Trying to get the kid's data unto the Home Page:
+            "single": {
+                value: function (key) {
+                    return $http({
+                        method: "GET",
+                        url: `https://capstone1-2f9f6.firebaseio.com/kids/${key}/.json`
+                    }).then(response => {
+                        return response.data
+                    })
+                }
+            },
             // "murder": {
             //     value: function (key) {
             //         return $http({
