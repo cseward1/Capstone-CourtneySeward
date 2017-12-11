@@ -2,7 +2,7 @@
 <div>
     <!-- Welcome Message! -->
     <h2>Welcome to the Home Page after logging in!</h2>
-    <p>Welcome to your Dashboard.</p>
+    <!-- <p>Welcome to your Dashboard.</p> -->
 
 <!-- Buttons displaying on the main page: -->
     <!-- Health Page Button -->
@@ -12,11 +12,13 @@
     <!-- Nanny log button -->
     <button ng-click="nannyLogButton()">Daily Nanny Log!</button>
 </div>
+
 <div>
     <h4> Family Info...</h4>
-    <div ng-repeat="kid in kids">
+    <div ng-repeat="kid in kidz">
        <strong>Name:</strong> {{ kid.firstName }} <br>
        <strong>Age:</strong>{{ kid.age }} <br>
        <strong>Gender:</strong>{{ kid.gender }}
+    </div>
 
 </div>

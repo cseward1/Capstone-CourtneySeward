@@ -9,4 +9,6 @@ angular
         kidsFactory.list().then(data => {
             $scope.kids = data
         })
+
+        
     })

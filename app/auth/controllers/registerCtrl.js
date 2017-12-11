@@ -2,7 +2,7 @@
 angular.module("CapstoneApp")
     .controller("RegisterCtrl", function ($scope, $location, AuthFactory, kidsFactory, $timeout) {
         // $scope.auth = {}
-
+        let userId = AuthFactory.getUser()
         // HIDE AND SHOW FOR THE REGISTRATION FORM:
         // hide and show for the first drop down form
         $scope.myvalue = false;
@@ -27,13 +27,18 @@ angular.module("CapstoneApp")
 
         // Collect the Kid's Information from the form and Factory and Post it to Firebase:
     
-        $scope.newKid = {}
+        // $scope.newKid = {}
 
-        $scope.saveChild = function (kid) {
-            kidsFactory.add(kid)
-            $location.url("/register")
-            console.log("You have saved the Child's information into Firebase!")
-        }
+        // call the parents data here to join parent with child
+        // $scope.addParentWithChild = function () {
+        //     console.log(getUser)
+        // }
+
+        // $scope.saveChild = function (kid) {
+        //     kidsFactory.add(kid)
+        //     $location.url("/register")
+        //     console.log("You have saved the Child's information into Firebase!")
+        // }
 
         // NEXT STEP: 
         // grab the information from your Registration form and call the "kid" information to POST to Firebase
@@ -42,7 +47,7 @@ angular.module("CapstoneApp")
         $timeout(() => {
             if (!kidsFactory.cache) {
                 console.info("No cached data")
-                kidsFactory.list(true).then(data => {
+                kidsFactory.list(userId).then(data => {
                     $scope.kids = data
                 })
             } else {
@@ -52,11 +57,13 @@ angular.module("CapstoneApp")
         }, 200)
 
 
-        $scope.addKid = function () {
+        $scope.saveChild = function () {
+            console.log("user!", firebase.auth().currentUser.id)
             const kid = {
-                "firstName": $scope.newKid.firstName,
-                "age": $scope.newKid.age,
-                "Gender": $scope.newKid.Gender
+                "firstName": $scope.kid.firstName,
+                "age": $scope.kid.age,
+                "Gender": $scope.kid.gender,
+                "ParentID": AuthFactory.getUser()
                 // "employmentEnd": 0
             }
 
@@ -66,7 +73,7 @@ angular.module("CapstoneApp")
             kidsFactory.add(kid).then(() => {
                 $scope.kid.firstName = ""
                 $scope.kid.age = ""
-                $scope.kid.Gender = ""
+                $scope.kid.gender = ""
             })
 
         

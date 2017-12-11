@@ -8,21 +8,23 @@ angular
             },
             // authroize the user with Firebase-  that is why you are calling the token
             "list": {
-                value: function () {
+                value: function (user) {
                     return firebase.auth().currentUser.getToken(true)
                         .then(idToken => {
                             return $http({
                                 method: "GET",
-                                url: `https://capstone1-2f9f6.firebaseio.com/kids/.json?auth=${idToken}`
+                                url: `https://capstone1-2f9f6.firebaseio.com/kids/.json?orderBy="ParentID"&equalTo="${user}"&auth=${idToken}`
                             })
                         }).then(response => {
                             const data = response.data
                             // setting the key as a property called "id"
-                            console.log(data)
+                            console.log("kid list return data", data)
                             this.cache = Object.keys(data).map(key => {
                                 data[key].id = key
                                 return data[key]
+                                
                             })
+                            console.log(this.cache)
                             return this.cache
                         })
                 }
@@ -75,6 +77,7 @@ angular
             // the collection below is the "kid(s) info collection"
             "add": {
                 value: function (kid) {
+                    console.log(kid)
                     return firebase.auth().currentUser.getToken(true)
                         .then(idToken => {
                             console.log(idToken)

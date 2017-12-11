@@ -41,7 +41,7 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             controller: "RegisterCtrl",
             // resolve: { isAuth }
         })
-        // Partial call for connecting the home page to the Home page after a user logs in:
+        // Partial call for connecting the login to the Home page after a user logs in:
         .when("/HomePageInformation/homePage", {
             templateUrl: "app/HomePageInformation/partials/homePage.html",
             controller: "homePageCtrl",
@@ -66,13 +66,14 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             controller: "nannylogCtrl",
             // resolve: { isAuth }
         })
+        .otherwise('/HomePageInformation/homePage')
 
-        // Routing call to display the kids information on the home page:
-             .when("/HomePageInformation/homePage", {
-                templateUrl: "app/HomePageInformation/partials/homePage.html",
-                controller: "RegisterCtrl",
-                // resolve: { isAuth }
-            })
+        // // Routing call to display the kids information on the home page:
+        //      .when("/HomePageInformation/homePage", {
+        //         templateUrl: "app/HomePageInformation/partials/homePage.html",
+        //         controller: "RegisterCtrl",
+        //         // resolve: { isAuth }
+        //     })
     
 
     // closing brackets below are for the function that chains the .when calls. House all of my ".when" calls within this function

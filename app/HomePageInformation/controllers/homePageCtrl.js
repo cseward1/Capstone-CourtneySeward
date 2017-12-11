@@ -1,9 +1,14 @@
 // Home Page Controller:
 
 angular.module("CapstoneApp")
-    .controller("homePageCtrl", function ($scope, $location) {
+    .controller("homePageCtrl", function ($scope, $location, AuthFactory, kidsFactory) {
+        console.log("in the home page controller")
         // $scope.homePage = {}
-
+        let UserID = AuthFactory.getUser() 
+        kidsFactory.list(UserID).then ((data) => {
+            $scope.kidz = data
+            console.log("scope.kidz", $scope.kidz)            
+        })
 
 
         // Accesing other Partials from the Home Page:

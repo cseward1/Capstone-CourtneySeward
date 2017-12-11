@@ -10,13 +10,13 @@ angular.module("CapstoneApp")
             
             // after i log in it is taking me to the Homepage
             // this code when you refresh will keep you on the home page after logged in
-            if ($location.url() !== "/HomePageInformation/homePage") {
-                $timeout(function () {
-                    // $location.url("/HomePageInformation/homePage")
-                }, 500)
-            } else {
+            // if ($location.url() !== "/HomePageInformation/homePage") {
+            //     $timeout(function () {
+            //         // $location.url("/HomePageInformation/homePage")
+            //     }, 500)
+            // } else {
                 $route.reload()
-            }
+            // }
 
         } else {
             currentUserData = null
@@ -35,7 +35,7 @@ angular.module("CapstoneApp")
             }
         },
         getUser: {
-            value: () => firebase.auth().currentUser
+            value: () => firebase.auth().currentUser.uid
         },
         logout: {
             value: () => firebase.auth().signOut()
