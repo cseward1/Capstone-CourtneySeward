@@ -1,13 +1,18 @@
 <div>
+        <!-- Check the value before adding new items -->
+        <h3>Errand and Grocery List</h3>
+        <p>{{errortext}}</p>
     <ul>
-        <li ng-repeat="x in products">{{x}}
+        <li ng-repeat="errand in errandList">{{x}}
             <!-- make a <span> element for each item, and give them an ng-click directive which calls the removeItem function with the current $index. -->
+                {{errand.listItem}}
             <span ng-click="removeItem($index)">&times;</span>
         </li>
     </ul>
-    <!-- bind it to the application with the ng-model directive -->
-    <input ng-model="addMe">
-    <button ng-click="addItem()">Add</button>
-    <!-- We will fix that by checking the value before adding new items -->
-    <p>{{errortext}}</p>
+        <!-- bind it to the application with the ng-model directive -->
+        <input ng-model="itemName">
+        <!-- create an "Add Me" Button -->
+        <button ng-click="saveListItem()">Add</button>
+
+
     </div
