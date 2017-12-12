@@ -6,7 +6,7 @@ angular
             value: null,
             writable: true
         },
-        // authroize the user with Firebase-  that is why you are calling the token
+        // authroize the user with Firebase (that is why you are calling the token ID)
         "list": {
             value: function (userId) {
                 return firebase.auth().currentUser.getToken(true)
@@ -28,7 +28,7 @@ angular
             }
         },
 
-        // Trying to get the errand list displaying unto the Home Page:
+        // Display the errand list unto the Errand Page:
         "single": {
             value: function (key) {
                 return $http({
@@ -39,14 +39,16 @@ angular
                 })
             }
         },
-        // "murder": {
-        //     value: function (key) {
-        //         return $http({
-        //             method: "DELETE",
-        //             url: `https://angular-employees-6727b.firebaseio.com/employees/${key}/.json`
-        //         })
-        //     }
-        // },
+
+        //  Delete an item from the Errand List:
+        "murder": {
+            value: function (key) {
+                return $http({
+                    method: "DELETE",
+                    url:  `https://capstone1-2f9f6.firebaseio.com/errands/${key}/.json`
+                })
+            }
+        },
         // "find": {
         //     value: function (searchString) {
         //         const result = this.cache.find(emp => {

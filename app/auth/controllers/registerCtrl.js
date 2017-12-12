@@ -2,7 +2,7 @@
 angular.module("CapstoneApp")
     .controller("RegisterCtrl", function ($scope, $location, AuthFactory, kidsFactory, $timeout) {
         // $scope.auth = {}
-        let userId = AuthFactory.getUser()
+        let user = AuthFactory.getUser()
         // HIDE AND SHOW FOR THE REGISTRATION FORM:
         // hide and show for the first drop down form
         $scope.myvalue = false;
@@ -47,7 +47,7 @@ angular.module("CapstoneApp")
         $timeout(() => {
             if (!kidsFactory.cache) {
                 console.info("No cached data")
-                kidsFactory.list(userId).then(data => {
+                kidsFactory.list(user.uid).then(data => {
                     $scope.kids = data
                 })
             } else {
@@ -63,7 +63,7 @@ angular.module("CapstoneApp")
                 "firstName": $scope.kid.firstName,
                 "age": $scope.kid.age,
                 "Gender": $scope.kid.gender,
-                "ParentID": AuthFactory.getUser()
+                "ParentID": user.uid
                 // "employmentEnd": 0
             }
 

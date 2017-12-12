@@ -4,8 +4,8 @@ angular.module("CapstoneApp")
     .controller("homePageCtrl", function ($scope, $location, AuthFactory, kidsFactory, $timeout) {
         console.log("in the home page controller")
         // $scope.homePage = {}
-        let UserID = AuthFactory.getUser() 
-        kidsFactory.list(UserID).then ((data) => {
+        let user = AuthFactory.getUser() 
+        kidsFactory.list(user.uid).then ((data) => {
             // timeout will re-initilize and re-bind your event listeners, kind of a "Wake Up" call:
             $timeout()
             $scope.kidz = data
