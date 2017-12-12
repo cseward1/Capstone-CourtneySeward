@@ -10,5 +10,5 @@ angular
             $scope.kids = data
         })
 
-        
+
     })

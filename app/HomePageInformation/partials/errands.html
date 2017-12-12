@@ -1,5 +1,13 @@
 <div>
-    <p>Errands and Task Page</p>
-
-
-</div>
+    <ul>
+        <li ng-repeat="x in products">{{x}}
+            <!-- make a <span> element for each item, and give them an ng-click directive which calls the removeItem function with the current $index. -->
+            <span ng-click="removeItem($index)">&times;</span>
+        </li>
+    </ul>
+    <!-- bind it to the application with the ng-model directive -->
+    <input ng-model="addMe">
+    <button ng-click="addItem()">Add</button>
+    <!-- We will fix that by checking the value before adding new items -->
+    <p>{{errortext}}</p>
+    </div
