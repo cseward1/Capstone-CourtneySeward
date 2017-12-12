@@ -14,6 +14,8 @@ angular.module("CapstoneApp")
         //         $scope.errortext = "The item is already in your shopping list.";
         //     }
         // }
+        // Call the current
+        $scope.today = new Date();
 
         // We also want to be able to remove items from the shopping list.
         // made a function named removeItem, which takes the index of the item you want to remove, as a parameter.
@@ -21,8 +23,15 @@ angular.module("CapstoneApp")
             // checking value and throwing error if already inputted
             $scope.errortext = "";
             $scope.products.splice(x, 1);
-        }
 
+        }
+        
+        ErrandFactory.list(AuthFactory.getUser().uid)
+        .then(errandList => {
+            $timeout()
+            $scope.errandList = errandList
+            console.log("ErrandsList", $scope.errandList)
+        })
 
         // NEXT STEP: 
         // grab the information from your Grocery List and POST to Firebase attached to that parent Id

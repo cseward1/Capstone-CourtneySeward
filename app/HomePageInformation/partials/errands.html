@@ -1,24 +1,33 @@
 <div>
-    <!-- Check the value before adding new items -->
     <h3>Errand and Grocery List</h3>
     <form>
-    <input type="text" ng-model="storeName"> {{errand.storeName}}
-    <button ng-click="saveListItem()">Save Store Name</button>
+        <!-- Date the List was Created: -->
+        <div>
+            <p>{{ today | date : "'Date:' MMMM d, y" }}</p>
+        </div>
 
-    <p>{{errortext}}</p>
+        <!-- Enter Store Name: -->
+        <div> Store Name:
+        <input type="text" ng-model="storeName"> 
+        {{errand.storeName}}
+        </div>
+        <!-- <button ng-click="saveListItem()">Save Store Name</button> -->
 
-    <ul>
-        <li ng-repeat="errand in errandList">{{x}}
-            <!-- make a <span> element for each item, and give them an ng-click directive which calls the removeItem function with the current $index. -->
-            {{errand.listItem}}
 
-            <span ng-click="removeItem($index)">&times;</span>
-        </li>
-    </ul>
-    <!-- bind it to the application with the ng-model directive -->
-    <input ng-model="itemName">
-    <!-- create an "Add Me" Button -->
-    <button ng-click="saveListItem()">Add</button>
-</form>
+        <!-- Begin Writing Your list: -->
+        <ul ng-repeat="(key, value) in errandList | groupBy: 'storeName'">
+            {{key}}
+            <li ng-repeat="errand in value"> 
+                {{errand.listItem}}
+                <!-- make a <span> element for each item, and give them an ng-click directive which calls the removeItem function with the current $index. -->
+                <!-- {{errand.listItem}} {{errand.storeName}} -->
 
+                <span ng-click="removeItem($index)">&times;</span>
+            </li>
+        </ul>
+        <!-- bind it to the application with the ng-model directive -->
+        <input ng-model="itemName">
+        <!-- create an "Add Me" Button -->
+        <button ng-click="saveListItem()">Add</button>
+    </form>
     </div

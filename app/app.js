@@ -1,4 +1,4 @@
-angular.module("CapstoneApp", ["ngRoute"])
+angular.module("CapstoneApp", ["ngRoute", "angular.filter"])
 
 const isAuth = AuthFactory => new Promise((resolve, reject) => {
     if (AuthFactory.isAuthenticated()) {

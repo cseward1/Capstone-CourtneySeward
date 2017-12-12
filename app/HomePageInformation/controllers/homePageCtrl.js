@@ -17,19 +17,19 @@ angular.module("CapstoneApp")
         // Go from Home Page to Health Page:
         $scope.healthButton = function () {
             $location.url("/healthPage")
-            console.log("You are now registered and at the health, welcome!")
+            console.log("You are now registered and at the health page!")
         }
 
         // Go from the Home Page to the Errand Page:
         $scope.errandsButton = function () {
             $location.url("/errandsPage")
-            console.log("You are now registered and at the errands, welcome!")
+            console.log("You are now at the errands page!")
         }
 
         // Go from the Home Page to the NannyLog Page:
         $scope.nannyLogButton = function () {
             $location.url("/nannyLogButton")
-            console.log("You are now registered and at the nannylog, welcome!")
+            console.log("You are now registered and at the nannylog page!")
         }
 
         // Closing Brackets below
