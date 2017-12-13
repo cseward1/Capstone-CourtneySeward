@@ -6,7 +6,7 @@ angular
             value: null,
             writable: true
         },
-        // authroize the user with Firebase (that is why you are calling the token ID)
+        // authorize the user with Firebase (that is why you are calling the token ID):
         "list": {
             value: function (userId) {
                 return firebase.auth().currentUser.getToken(true)
@@ -51,9 +51,8 @@ angular
         },
  
 
-        // Steps: make differnet posts that you view as collections
-        // Simply put the information in Firebase into different collections
-        // the collection below is the "kid(s) info collection"
+       
+        // the collection below is the "erand(s)  collection"
         "add": {
             value: function (errand) {
                 console.log(errand)

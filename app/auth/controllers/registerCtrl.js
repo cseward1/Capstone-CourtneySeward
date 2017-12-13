@@ -1,4 +1,4 @@
-
+// Controller file for Regsitration:
 angular.module("CapstoneApp")
     .controller("RegisterCtrl", function ($scope, $location, AuthFactory, kidsFactory, $timeout) {
         // $scope.auth = {}
@@ -89,12 +89,5 @@ angular.module("CapstoneApp")
         }
 
     })
-
-
-
-// Notes:
-
-        //   Use the ng-click to check if there is any datain the factory cache each time the user loads a view
-        //   that is bound to this controller
 
 

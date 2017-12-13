@@ -1,5 +1,12 @@
 <div>
     <p>Health and Allergy Page</p>
 
+    <div>
 
+        <!-- drop down that displays the Allergies from Yummly API -->
+        Display the Allergies:
+        <select ng-repeat="allergy in allergies">
+            <option>{{ allergy.name }}</option>
+        </select>
+    </div>
 </div>

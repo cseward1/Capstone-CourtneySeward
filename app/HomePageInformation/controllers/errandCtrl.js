@@ -1,23 +1,23 @@
-// Errand Control Page that displays the Errand List unto the DOM and 
+// Control Page that displays the Errand List on to the DOM: 
 angular.module("CapstoneApp")
-    .controller("errandCtrl", function ($scope, AuthFactory, ErrandFactory, $timeout, $location) {
+    .controller("errandCtrl", function ($scope, $routeParams, AuthFactory, ErrandFactory, $timeout, $location) {
         $scope.products = ["Milk", "Bread", "Cheese"];
 
 
         // Delete an item from the Errand List:
         $scope.deleteListItem = function (errand) {
-            console.log("Delete list item Button is firing!")
+            console.log("the delete list item Button is firing!")
             var errandIndex = $scope.errandList.indexOf(errand);
             if (errandIndex >= 0) {
                 $scope.errandList.splice(errandIndex, 1)
             }
         }
 
-        // call the date 
+        // call the date: 
         $scope.today = new Date();
 
 
-        // keep the list updated and displaying
+        // keep the list updated and displaying:
         ErrandFactory.list(AuthFactory.getUser().uid)
             .then(errandList => {
                 $timeout()
@@ -27,7 +27,7 @@ angular.module("CapstoneApp")
 
 
         $scope.saveListItem = function () {
-            // console.log("user!", firebase.auth().currentUser.id)
+            // console.log("user!", firebase.auth().currentUser.id):
             const errand = {
                 // "Date": $scope.Date.now(),
                 "storeName": $scope.storeName,
@@ -35,8 +35,7 @@ angular.module("CapstoneApp")
                 "ParentID": AuthFactory.getUser().uid
             }
 
-            //  Use the factory to POST to Firebase
-
+            //  Use the factory to POST to Firebase:
             ErrandFactory.add(errand).then(() => {
                 // $scope.Date.now() = ""
                 // $scope.storeName = ""
@@ -44,7 +43,7 @@ angular.module("CapstoneApp")
             })
 
 
-                // If POST was successful, retrieve new list of kids
+                // If POST was successful, retrieve new list of kids:
                 .then(() => {
                     return ErrandFactory.list(AuthFactory.getUser().uid)
                 })
@@ -58,8 +57,8 @@ angular.module("CapstoneApp")
                 })
         }
 
-        // This function is bound to an ng-click directive on the button in the view
-        $scope.deleteErrandItem = () =>
-            ErrandFactory.delete($scope.errandList, $routeParams.ParentID).then(() =>
+        // This function is bound to an ng-click directive on the button in the view:
+        $scope.deleteListItem = () =>
+            ErrandFactory.delete($scope.errand, $routeParams.errandId).then(() =>
                 $location.url("/"))
     })

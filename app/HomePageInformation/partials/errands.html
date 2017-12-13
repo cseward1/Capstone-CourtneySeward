@@ -10,8 +10,7 @@
     <div>
         <strong>Store Name:</strong>
         <br>
-        <input type="text" ng-model="storeName">
-         {{errand.storeName}}
+        <input type="text" ng-model="storeName"> {{errand.storeName}}
     </div>
 
     <div>
@@ -21,7 +20,7 @@
 
     <!-- bind it to the application with the ng-model directive -->
     <input ng-model="itemName">
-    
+
     <!-- create an "Add Me" Button -->
     <button ng-click="saveListItem()">Add</button>
 
@@ -30,11 +29,11 @@
     <ul ng-repeat="(key, value) in errandList | groupBy: 'storeName'">
         <h1>{{key}}</h1>
         <li class="errandList" ng-repeat="errand in value">
-            
-            {{errand.listItem}} 
-            <button ng-click="deleteListItem(errand)">Delete</button> 
+
+            {{errand.listItem}}
+            <button ng-click="deleteListItem(errand)">Delete</button>
             <button ng-click="GotItem"> Got It!</button>
-            
+
         </li>
     </ul>
 
