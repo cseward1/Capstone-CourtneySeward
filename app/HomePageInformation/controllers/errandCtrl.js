@@ -3,25 +3,25 @@ angular.module("CapstoneApp")
     .controller("errandCtrl", function ($scope, AuthFactory, ErrandFactory, $timeout, $location) {
         $scope.products = ["Milk", "Bread", "Cheese"];
 
-        $scope.saveListItem = function () {
-            $scope.errortext = "";
-            if (!$scope.addMe) {return;}
-            if ($scope.products.indexOf($scope.addMe) == -1) {
-                $scope.products.push($scope.addMe);
-            } else {
-                $scope.errortext = "The item is already in your shopping list.";
+        // $scope.saveListItem = function () {
+        //     $scope.errortext = "";
+        //     if (!$scope.addMe) {return;}
+        //     if ($scope.products.indexOf($scope.addMe) == -1) {
+        //         $scope.products.push($scope.addMe);
+        //     } else {
+        //         $scope.errortext = "The item is already in your shopping list.";
+        //     }
+        // } 
+    // Delete an item from the Errand List:
+        $scope.deleteListItem = function(errand){
+            console.log("Delete list item Button is firing!")
+            var errandIndex = $scope.errandList.indexOf(errand);
+            if (errandIndex >= 0) {
+                $scope.errandList.splice(errandIndex, 1)
             }
-        } 
-        $scope.removeItem = function (x) {
-            $scope.errortext = "";
-            $scope.errands.splice(x, 1);
-        } 
-
-        // trying to remove list items:
-        $scope.removeItem = function (x) {
-            $scope.errands.splice(x, 1);
         }
 
+        
         // call the date 
         $scope.today = new Date();
 

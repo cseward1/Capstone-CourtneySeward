@@ -30,7 +30,10 @@
         <h1>{{key}}</h1>
         <li class="errandList" ng-repeat="errand in value">
             
-            {{errand.listItem}}
+            {{errand.listItem}} 
+            <button ng-click="deleteListItem(errand)">Delete</button> 
+            <button ng-click="GotItem"> Got It!</button>
+            
         </li>
     </ul>
 
