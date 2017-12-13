@@ -1,10 +1,9 @@
 <div>
     <p>Health and Allergy Page</p>
-
     <div>
-
         <!-- drop down that displays the Allergies from Yummly API -->
-        Display the Allergies:<br>
+        Display the Allergies:
+        <br>
         <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
         </select>
 
@@ -12,7 +11,16 @@
         Search Recipe:
         <input value=text ng-model="searchString" placeholder="Search Recipes">
 
+    
         <!-- Create a Search Button that takes both the filtered allergy and the search form -->
-        <button ng-click="searchRecipe()">Search</button>
+        <button ng-click="searchRecipe(selectedAllergy)">Search</button>
+
+            <!-- List the Recipes -->
+            <div>
+                    <ul ng-repeat="recipe in Recipes" >
+                        <li>{{ recipe.recipeName }}</li>
+                    </ul>
+                </div>
+        
     </div>
 </div>
