@@ -13,28 +13,21 @@ angular
             // when do I put in the parameters?
 
             // authorize the user with Firebase (that is why you are calling the token ID):
-            "list": {
-                value: function (userId, allergy) {
+            "getRecipes": {
+                value: function (searchString) {
                     return firebase.auth().currentUser.getToken(true)
                         .then(idToken => {
                             return $http({
                                 method: "GET",
-                                url: `http:api.yummly.com/v1/api/recipes?_app_id=7633e14a&_app_key=802aa25ab2fcd5e3374f66b206bf30b8&q=garlic&requirepicture=true&allowedAllergy[]=${allergy.allergyCode}`
+                                url: `http://api.yummly.com/v1/api/recipes?_app_id=7633e14a&_app_key=802aa25ab2fcd5e3374f66b206bf30b8&q="${searchString}"`
                             })
                         }).then(response => {
-                            const data = response.data
-                            // setting the key as a property called "id"
-                            this.cache = Object.keys(data).map(key => {
-                                data[key].id = key
-                                return data[key]
-
-                            })
-                            return this.cache
+                            return response.data.matches
                         })
                 }
             },
 
-            // Display the errand list unto the Errand Page:
+            // Display the search list unto the Health Page:
             // "single": {
             //     value: function (key) {
             //         return $http({

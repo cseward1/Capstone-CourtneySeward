@@ -9,12 +9,13 @@
     <!-- Style Sheet: -->
     <link rel="stylesheet" type="text/css" href="global.css">
 </head>
-<!-- initiate Angular -->
+<!-- initiate Angular: -->
+
 <body ng-app="CapstoneApp">
 
-        <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+    <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
 
-    <!-- creating a a log out button -->
+    <!-- creating a a log out button: -->
     <!-- keep the logout button above the view so it will always display -->
     <nav ng-controller="AuthCtrl">
         <button ng-click="logoutUser()">Logout</button>
@@ -22,8 +23,8 @@
 
     <div ng-view></div>
     <nav ng-include="'app/navigation/partials/footer.html'"></nav>
-    
-    <!-- Add a footer  -->
+
+    <!-- Add a footer:  -->
     <nav ng-include="'app/navigation/partials/footer.html'"></nav>
 
 
@@ -32,10 +33,10 @@
     <!-- Require the Angular script-->
     <script src="./lib/node_modules/angular/angular.min.js"></script>
 
-    <!-- for the grouping on the errand partial -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+    <!-- for the grouping on the errand partial: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
 
-    <!-- Require the Firebase Script -->
+    <!-- Require the Firebase Script: -->
     <script src="./lib/node_modules/firebase/firebase.js"></script>
     <script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
     <script src="./app/app.js"></script>
@@ -44,22 +45,23 @@
     <!-- Factories: -->
     <script src="./app/auth/factories/AuthFactory.js"></script>
     <script src="./app/HomePageInformation/factories/homePageFactory.js"></script>
-    <script src= "./app/KidsInformation/factories/kidsFactory.js"></script>
-    <script src= "./app/HomePageInformation/factories/ErrandFactory.js"></script>
+    <script src="./app/KidsInformation/factories/kidsFactory.js"></script>
+    <script src="./app/HomePageInformation/factories/ErrandFactory.js"></script>
     <script src="./app/HomePageInformation/factories/healthFactory.js"></script>
     <script src="./app/HomePageInformation/factories/AllergyFactory.js"></script>
 
     <!-- Controllers: -->
     <script src="./app/auth/controllers/AuthCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/homePageCtrl.js"></script>
-    <script src= "./app/auth/controllers/registerCtrl.js"></script>
+    <script src="./app/auth/controllers/registerCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/errandCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/healthCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/nannylogCtrl.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidsCtrl.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidsList.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidDetailCtrl.js"></script>
+    <script src="./app/KidsInformation/controllers/kidsCtrl.js"></script>
+    <script src="./app/KidsInformation/controllers/kidsList.js"></script>
+    <script src="./app/KidsInformation/controllers/kidDetailCtrl.js"></script>
     <script src="./app/Navigation/controllers/NavCtrl.js"></script>
 
 </body>
+
 </html>
