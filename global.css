@@ -1,7 +1,21 @@
 /* Errand Partial */
 
 /* Styled Classes */
-
 .errandList {
 list-style: none
+}
+
+
+/* Nav Control: */
+
+nav > ul {
+    padding: 0;
+    padding: 10px;
+    /* border: 1px black; */
+}
+
+nav > ul > li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 10px;
 }

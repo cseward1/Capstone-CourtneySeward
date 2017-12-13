@@ -12,6 +12,8 @@
 <!-- initiate Angular -->
 <body ng-app="CapstoneApp">
 
+        <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+
     <!-- creating a a log out button -->
     <!-- keep the logout button above the view so it will always display -->
     <nav ng-controller="AuthCtrl">
@@ -19,12 +21,15 @@
     </nav>
 
     <div ng-view></div>
+    <nav ng-include="'app/navigation/partials/footer.html'"></nav>
+    
 
     <!-- Add a footer  -->
-    <!-- <nav ng-include="'app/navigation/partials/footer.html'"></nav> -->
+    <nav ng-include="'app/navigation/partials/footer.html'"></nav>
+
+
     <!-- Scripts Begin: -->
     <!-- Scripts are assigned in a specific order: Angular, Angular Routing, App.js, Factories, and Controllers -->
-
     <!-- Require the Angular script-->
     <script src="./lib/node_modules/angular/angular.min.js"></script>
 
@@ -37,15 +42,11 @@
     <script src="./app/app.js"></script>
     <script src="./app/appConfig.js"></script>
 
-
-
-
     <!-- Factories: -->
     <script src="./app/auth/factories/AuthFactory.js"></script>
     <script src="./app/HomePageInformation/factories/homePageFactory.js"></script>
     <script src= "./app/KidsInformation/factories/kidsFactory.js"></script>
     <script src= "./app/HomePageInformation/factories/ErrandFactory.js"></script>
-
 
     <!-- Controllers: -->
     <script src="./app/auth/controllers/AuthCtrl.js"></script>
@@ -57,6 +58,7 @@
     <script src= "./app/KidsInformation/controllers/kidsCtrl.js"></script>
     <script src= "./app/KidsInformation/controllers/kidsList.js"></script>
     <script src= "./app/KidsInformation/controllers/kidDetailCtrl.js"></script>
+    <script src="./app/Navigation/controllers/NavCtrl.js"></script>
 
 </body>
 </html>

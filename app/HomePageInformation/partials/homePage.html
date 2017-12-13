@@ -1,7 +1,7 @@
 <!-- The Home Page Index After you Succesfully Log-In -->
 <div>
     <!-- Welcome Message! -->
-    <h2>Welcome to the Home Page after logging in!</h2>
+    <h2>Home Page</h2>
     <!-- <p>Welcome to your Dashboard.</p> -->
 
 <!-- Buttons displaying on the main page: -->
@@ -14,11 +14,11 @@
 </div>
 
 <div>
-    <h4> Family Info...</h4>
+    <h4> My Family Info:</h4>
     <div ng-repeat="kid in kidz">
-       <strong>Name:</strong> {{ kid.firstName }} <br>
+       <strong>Child's Name:</strong> {{ kid.firstName }} <br>
        <strong>Age:</strong>{{ kid.age }} <br>
-       <strong>Gender:</strong>{{ kid.Gender }}
+       <strong>Gender:</strong>{{ kid.Gender }} <br>
     </div>
 
 </div>

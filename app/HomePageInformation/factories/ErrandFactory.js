@@ -1,6 +1,6 @@
 angular
 .module("CapstoneApp")
-.factory("ErrandFactory", function ($http, $timeout, $location, $route) {
+.factory("ErrandFactory", function ($http, $timeout, $location, $route, $routeParams) {
     return Object.create(null, {
         "cache": {
             value: null,
