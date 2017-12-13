@@ -19,6 +19,11 @@
             <div>
                     <ul ng-repeat="recipe in Recipes" >
                         <li>{{ recipe.recipeName }}</li>
+                        <!-- nested ng-repeat to grab the ingredients -->
+                        <div ng-repeat="ingredient in recipe.ingredients">
+                            <p>{{ingredient}}</p>
+                        </div>
+                        <img src="{{recipe.imageUrlsBySize[90]}}"/>
                     </ul>
                 </div>
         
