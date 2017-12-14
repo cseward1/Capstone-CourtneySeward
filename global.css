@@ -7,9 +7,8 @@ list-style: none
 
 
 /* Nav Control: */
-
 nav > ul {
-    padding: 0;
+    padding: 10;
     padding: 10px;
     /* border: 1px black; */
 }
@@ -17,5 +16,20 @@ nav > ul {
 nav > ul > li {
     display: inline;
     list-style-type: none;
-    margin: 0 10px;
+    margin: 0 70px;
+}
+
+/* Log out button */
+.logOutButton {
+    display: top-left;
+
+}
+
+
+/* Health Page: */
+
+img {
+    width:200px;
+    height:160px;
+
 }

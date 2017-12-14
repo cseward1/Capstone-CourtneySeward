@@ -1,11 +1,12 @@
 <div>
-    <p>Health and Allergy Page</p>
+    <p>Making Meals with my Food Allergies</p>
     <div>
         <!-- drop down that displays the Allergies from Yummly API -->
-        Display the Allergies:
-        <br>
-        <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
+      
+       
+        Display the Allergies: <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
         </select>
+
 
         <!-- Search for recipes -->
         Search Recipe:
@@ -24,7 +25,10 @@
                             <p>{{ingredient}}</p>
                         </div>
                         <img src="{{recipe.imageUrlsBySize[90]}}"/>
+                        <br>
+                        <button ng-click="SaveRecipe">Add to My Favorite Meal!</button>
                     </ul>
+                   
                 </div>
         
     </div>
