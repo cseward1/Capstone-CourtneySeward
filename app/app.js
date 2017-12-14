@@ -61,9 +61,9 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             // resolve: { isAuth }
         })
         //     // Routing call to display the nanny LogPage:
-        .when("/HomePageInformation/nannyLog", {
-            templateUrl: "app/HomePageInformation/partials/nannyLog.html",
-            controller: "nannylogCtrl",
+        .when("/HomePageInformation/favoriteRecipes", {
+            templateUrl: "app/HomePageInformation/partials/favoriteRecipes.html",
+            controller: "favoriteRecipeCtrl",
             // resolve: { isAuth }
         })
         .otherwise('/HomePageInformation/homePage')

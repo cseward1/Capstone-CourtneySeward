@@ -6,17 +6,22 @@ list-style: none
 }
 
 
-/* Nav Control: */
+/* Navigation Styling: */
 nav > ul {
     padding: 10;
     padding: 10px;
     /* border: 1px black; */
 }
 
-nav > ul > li {
+nav > ul > span > li {
     display: inline;
     list-style-type: none;
     margin: 0 70px;
+    
+}
+nav > ul > li > a{
+text-decoration: none;
+
 }
 
 /* Log out button */
@@ -27,9 +32,22 @@ nav > ul > li {
 
 
 /* Health Page: */
-
 img {
     width:200px;
     height:160px;
+
+}
+.recipe{
+    list-style-type: none;
+
+}
+
+.recipeName{
+    list-style-type: none;
+
+}
+
+.recipeBuilder{
+    justify-content: center;
 
 }

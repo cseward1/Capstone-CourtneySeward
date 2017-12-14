@@ -9,7 +9,7 @@ angular.module("CapstoneApp")
     // Meta Data from the Yummly App that I hard coded in - didn't understand how to do a "get" request for the meta data
     $scope.allergies = AllergyFactory
     // function:
-    // 1. Get the values of the search field:
+    // 1. Get the values of the search field, the image, and ingredients with it filtering the allergy selected
     $scope.searchRecipe = function (allergy) {
         console.log(allergy)
         healthFactory.getRecipes($scope.searchString,allergy.allergyCode).then((Recipes) => {
@@ -22,6 +22,12 @@ angular.module("CapstoneApp")
             $scope.allergySearch = ""
         })
     }
+
+    // call the button to fire "saveFavoriteRecipe"
+          $scope.saveFavoriteRecipe = function (recipeName) {
+            $location.url("/HomePageInformation/favoriteRecipes")
+            console.log("save this recipe to my favorites!")
+            }
 
     // 2. String replace- go through the string and add a plus the api takes a 
     // 3.value of the allergy and the string with plus and send to the api

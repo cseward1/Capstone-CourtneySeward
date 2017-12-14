@@ -1,10 +1,15 @@
 <div>
-    <p>Making Meals with my Food Allergies</p>
+    <!-- <p>Making Meals with my Food Allergies</p> -->
     <div>
         <!-- drop down that displays the Allergies from Yummly API -->
-      
-       
-        Display the Allergies: <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
+        <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
+        <br>Child Name:
+        <select>
+            <option value="">Child Name 1  </option>
+            <option value="">Child Name 2</option>
+        </select>
+         Food Allergies:
+        <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
         </select>
 
 
@@ -12,24 +17,28 @@
         Search Recipe:
         <input value=text ng-model="searchString" placeholder="Search Recipes">
 
-    
+
         <!-- Create a Search Button that takes both the filtered allergy and the search form -->
         <button ng-click="searchRecipe(selectedAllergy)">Search</button>
 
-            <!-- List the Recipes -->
-            <div>
-                    <ul ng-repeat="recipe in Recipes" >
-                        <li>{{ recipe.recipeName }}</li>
-                        <!-- nested ng-repeat to grab the ingredients -->
-                        <div ng-repeat="ingredient in recipe.ingredients">
-                            <p>{{ingredient}}</p>
-                        </div>
-                        <img src="{{recipe.imageUrlsBySize[90]}}"/>
-                        <br>
-                        <button ng-click="SaveRecipe">Add to My Favorite Meal!</button>
-                    </ul>
-                   
+        <!-- List the Recipes -->
+        <div>
+            <ul ng-repeat="recipe in Recipes" class="Recipe">
+                <li class="recipeName">
+                    <strong>{{ recipe.recipeName }}:</strong>
+                </li>
+                <!-- nested ng-repeat to grab the ingredients -->
+                <div ng-repeat="ingredient in recipe.ingredients">
+                    {{ingredient}}
                 </div>
-        
+                <img src="{{recipe.imageUrlsBySize[90]}}" />
+                <br>
+                <!-- Add to my favorite meal list -->
+                <br>
+                <button ng-click="saveFavoriteRecipe()">Add to My Favorite Meal List!</button>
+            </ul>
+
+        </div>
+
     </div>
 </div>

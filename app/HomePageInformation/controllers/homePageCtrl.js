@@ -28,7 +28,7 @@ angular.module("CapstoneApp")
 
         // Go from the Home Page to the NannyLog Page:
         $scope.nannyLogButton = function () {
-            $location.url("/HomePageInformation/nannyLog")
+            $location.url("/HomePageInformation/favoriteRecipes")
             console.log("You are now registered and at the nannylog page!")
         }
 
