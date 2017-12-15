@@ -1,5 +1,5 @@
 angular.module("CapstoneApp")
-.controller("favoriteRecipeCtrl", function (healthFactory, AllergyFactory, $scope, $location) {
+.controller("favoriteRecipeCtrl", function (favoriteRecipeFactory, healthFactory, AllergyFactory, $scope, $location) {
 
 
 

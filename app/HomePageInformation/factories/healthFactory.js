@@ -24,6 +24,23 @@ angular
                         })
                 }
             },
+            // get the ingredients on the page
+            "getRecipeIngredients": {
+                value: function (recipe) {
+                    return firebase.auth().currentUser.getToken(true)
+                        .then(idToken => {
+                            return $http({
+                                method: "GET",
+                                url: `http://api.yummly.com/v1/api/recipe/${recipe}?_app_id=7633e14a&_app_key=802aa25ab2fcd5e3374f66b206bf30b8&`
+                            })
+                        }).then(response => {
+                            return response.data
+                        })
+                }
+            },
+
+            // Now make a get request for the recipe information:
+
 
             // Insert Pictures on the Page:
             // &requirePictures=true

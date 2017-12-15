@@ -5,10 +5,10 @@
         <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
         <br>Child Name:
         <select>
-            <option value="">Child Name 1  </option>
+            <option value="">Child Name 1 </option>
             <option value="">Child Name 2</option>
         </select>
-         Food Allergies:
+        Food Allergies:
         <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
         </select>
 
@@ -34,7 +34,18 @@
                 <img src="{{recipe.imageUrlsBySize[90]}}" />
                 <br>
                 <!-- Add to my favorite meal list -->
+
                 <br>
+                <button ng-click=seeIngredients(recipe.id)>See the Ingredients</button>
+                <div ng-repeat="ingredient in ingredientLines">
+                    {{ingredient}} <br>
+                </div>
+                <div>
+                    {{ingredient.numberOfServings}} <br>
+                    {{ingredient.prepTime}}
+                </div>
+
+                <!-- Save to my favorites Button -->
                 <button ng-click="saveFavoriteRecipe()">Add to My Favorite Meal List!</button>
             </ul>
 
