@@ -27,14 +27,14 @@ angular.module("CapstoneApp")
         $scope.seeIngredients = function (id) {
             healthFactory.getRecipeIngredients(id).then((ingredients) => {
                 console.log(ingredients)
-                $scope.$apply(function (ingredients) {
+                $scope.$apply(function () {
                     $scope.ingredients = ingredients
                 })
 
-                scope.recipeName = ""
-                scope.ingredientLines = ""
-                scope.prepTime = ""
-                scope.numberOfServings = ""
+                $scope.recipeName = ""
+                $scope.ingredientLines = ""
+                $scope.prepTime = ""
+                $scope.numberOfServings = ""
             })
         }
 

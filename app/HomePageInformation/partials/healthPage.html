@@ -37,12 +37,12 @@
 
                 <br>
                 <button ng-click=seeIngredients(recipe.id)>See the Ingredients</button>
-                <div ng-repeat="ingredient in ingredientLines">
+                <div ng-repeat="ingredient in ingredients.ingredientLines">
                     {{ingredient}} <br>
                 </div>
                 <div>
-                    {{ingredient.numberOfServings}} <br>
-                    {{ingredient.prepTime}}
+                    {{ingredients.numberOfServings}} <br>
+                    {{ingredients.prepTime}}
                 </div>
 
                 <!-- Save to my favorites Button -->
