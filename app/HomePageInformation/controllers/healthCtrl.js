@@ -3,6 +3,7 @@
 angular.module("CapstoneApp")
     .controller("healthCtrl", function (healthFactory, AllergyFactory, kidsFactory, AuthFactory, $scope, $location, $timeout) {
  console.log("the health page is dispalying")
+ $scope.showStuff = false
 
 // Grab acces to the kids names:
         let user = AuthFactory.getUser() 
@@ -33,6 +34,7 @@ angular.module("CapstoneApp")
 
         // Button call to See the Ingredients:
         $scope.seeIngredients = function (id) {
+            $scope.showStuff = !$scope.showStuff
             healthFactory.getRecipeIngredients(id).then((ingredients) => {
                 console.log(ingredients)
                 $scope.$apply(function () {
@@ -41,7 +43,7 @@ angular.module("CapstoneApp")
 
                 $scope.recipeName = ""
                 $scope.ingredientLines = ""
-                $scope.prepTime = ""
+                $scope.totalTime = ""
                 $scope.numberOfServings = ""
             })
         }
@@ -50,6 +52,7 @@ angular.module("CapstoneApp")
         $scope.saveFavoriteRecipe = function (recipeName) {
             $location.url("/HomePageInformation/favoriteRecipes")
             console.log("save this recipe to my favorites!")
+// save the actual recipe to firebase in this function
 
         }
 

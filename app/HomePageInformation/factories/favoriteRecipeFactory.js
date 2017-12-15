@@ -1,6 +1,6 @@
 // Favorite Recipe Factory:
 
 angular.module("CapstoneApp")
-.factory("favoriteRecipeFactory", function ($http, $timeout, $location, $route) {
+.factory("favoriteRecipeFactory", function (healthFactory, AllergyFactory, kidsFactory, AuthFactory, $scope, $location, $timeout) {
 
 })

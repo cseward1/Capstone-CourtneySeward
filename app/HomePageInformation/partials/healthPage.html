@@ -3,12 +3,11 @@
       
         <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
         <br>Child Name:
-        <div >
             <select>
                 <option value=""></option>
                 <option ng-repeat="kid in kidz" value="">{{kid.firstName}} </option>
             </select>
-        </div>
+        
 
         Food Allergy:
        
@@ -45,10 +44,10 @@
                     {{ingredient}}
                     <br>
                 </div>
-                <div>
+                <div ng-show="showStuff">
                     <strong>Number of Servings: </strong> {{ingredients.numberOfServings}}
                     <br>
-                    <strong>Prep Time:</strong> {{ingredients.prepTime}}
+                    <strong>Prep Time:</strong> {{ingredients.totalTime}}
                 </div>
 
                 <!-- Save to my favorites Button -->
