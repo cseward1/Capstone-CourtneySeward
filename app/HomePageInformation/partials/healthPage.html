@@ -1,20 +1,24 @@
 <div>
-    <!-- <p>Making Meals with my Food Allergies</p> -->
     <div>
-        <!-- drop down that displays the Allergies from Yummly API -->
+      
         <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
         <br>Child Name:
-        <select>
-            <option value="">Child Name 1 </option>
-            <option value="">Child Name 2</option>
-        </select>
-        Food Allergies:
+        <div >
+            <select>
+                <option value=""></option>
+                <option ng-repeat="kid in kidz" value="">{{kid.firstName}} </option>
+            </select>
+        </div>
+
+        Food Allergy:
+       
         <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
         </select>
+    
 
 
         <!-- Search for recipes -->
-        Search Recipe:
+        Search for Recipes:
         <input value=text ng-model="searchString" placeholder="Search Recipes">
 
 
@@ -28,9 +32,9 @@
                     <strong>{{ recipe.recipeName }}:</strong>
                 </li>
                 <!-- nested ng-repeat to grab the ingredients -->
-                <div ng-repeat="ingredient in recipe.ingredients">
+                <!-- <div ng-repeat="ingredient in recipe.ingredients">
                     {{ingredient}}
-                </div>
+                </div> -->
                 <img src="{{recipe.imageUrlsBySize[90]}}" />
                 <br>
                 <!-- Add to my favorite meal list -->
@@ -38,11 +42,13 @@
                 <br>
                 <button ng-click=seeIngredients(recipe.id)>See the Ingredients</button>
                 <div ng-repeat="ingredient in ingredients.ingredientLines">
-                    {{ingredient}} <br>
+                    {{ingredient}}
+                    <br>
                 </div>
                 <div>
-                    {{ingredients.numberOfServings}} <br>
-                    {{ingredients.prepTime}}
+                    <strong>Number of Servings: </strong> {{ingredients.numberOfServings}}
+                    <br>
+                    <strong>Prep Time:</strong> {{ingredients.prepTime}}
                 </div>
 
                 <!-- Save to my favorites Button -->
