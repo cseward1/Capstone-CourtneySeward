@@ -64,6 +64,8 @@ angular.module("CapstoneApp")
                 ingredientLines : recipe.ingredients.ingredientLines,
                 ingredients: recipe.ingredients,
                 totalTime : recipe.totalTime,
+                foodImage: recipe.imageUrlsBySize[90]
+                
                 // numberOfServings : recipe.numberOfServings
             }   
 

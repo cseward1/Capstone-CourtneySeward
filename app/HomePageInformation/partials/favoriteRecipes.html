@@ -19,23 +19,24 @@
             </li>
 
             <!-- Grab the total time for the recipe to cook/make: -->
-            <li class="recipeName">
+            <!-- <li class="recipeName">
                 <br>
-                <!-- <strong>{{ recipe.kidid }}:</strong> -->
-            </li>
-        </ul>
-    </div>
-    <!-- show servings and prep time: -->
-    <div ng-show="showStuff">
-        <strong>Number of Servings: </strong> {{ingredients.numberOfServings}}
+                <!-- <strong>{{ <recipe class="firstName"></recipe> }}:</strong> -->
+            <!-- </li>  -->
+       
+   <button ng-click"showIngredients()">Show the Ingredients</button>
+    <!-- show ingredients and prep time: -->
+    <div ng-repeat="ingredient in recipe.ingredients">
+       {{ingredient}}
         <br>
-        <br>
-        <strong>Prep Time:</strong> {{ingredients.totalTime}}
+        <!-- <strong>:</strong> {{recipe.ingredients}} -->
     </div>
+
 
 
     <!-- Grab the image -->
-    <img src="{{recipe.imageUrlsBySize[90]}}"/>
+    <img src="{{recipe.foodImage}}" />
     <br>
-
+</ul>
+</div>
 </div>
