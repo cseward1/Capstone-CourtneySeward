@@ -1,5 +1,28 @@
+<!-- this page will display each kids list of favorite foods: -->
 <div>
     <p>Favorite Recipes</p>
 
+    <!-- Grab the kids name from firebase: -->
+    <div ng-repeat="kid in kidz">
+        <strong>Name:</strong> {{ kid.firstName }}
+        <br>
+    </div>
+    <div>
 
+        <!-- Grab the Recipe Name -->
+        <li class="recipeName">
+            <br>
+            <strong>{{ recipe.recipeName }}:</strong>
+        </li>
+
+        <!-- Grab the total time for the recipe to cook/make: -->
+        <li class="recipeName">
+            <br>
+            <strong>{{ recipe.totalTime }}:</strong>
+        </li>
+
+        <!-- Grab the image -->
+        <img src="{{recipe.imageUrlsBySize[90]}}" />
+        <br>
+    </div>
 </div>

@@ -3,9 +3,10 @@
       
         <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
         <br>Child Name:
-            <select>
+            <select ng-model="kid">
                 <option value=""></option>
-                <option ng-repeat="kid in kidz" value="">{{kid.firstName}} </option>
+                <option ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}} </option>
+
             </select>
         
 
@@ -28,7 +29,9 @@
         <div>
             <ul ng-repeat="recipe in Recipes" class="Recipe">
                 <li class="recipeName">
+                    <br>
                     <strong>{{ recipe.recipeName }}:</strong>
+                    
                 </li>
                 <!-- nested ng-repeat to grab the ingredients -->
                 <!-- <div ng-repeat="ingredient in recipe.ingredients">
@@ -44,14 +47,17 @@
                     {{ingredient}}
                     <br>
                 </div>
+                <br>
                 <div ng-show="showStuff">
                     <strong>Number of Servings: </strong> {{ingredients.numberOfServings}}
+                    <br>
                     <br>
                     <strong>Prep Time:</strong> {{ingredients.totalTime}}
                 </div>
 
                 <!-- Save to my favorites Button -->
-                <button ng-click="saveFavoriteRecipe()">Add to My Favorite Meal List!</button>
+                <br>
+                <button ng-click="saveFavoriteRecipe(recipe)">Add to My Favorite Meal List!</button>
             </ul>
 
         </div>
