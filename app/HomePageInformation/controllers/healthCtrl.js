@@ -69,16 +69,21 @@ angular.module("CapstoneApp")
 
             // Use the factory to POST to Firebase
             favoriteRecipeFactory.add(kidrecipe)
-            // .then(() => {
+            .then(() => {
+                $timeout(function (){
+                    console.log("the string")
+                    $location.url("/HomePageInformation/favoriteRecipes/" + $scope.kid)
+                }, 100) 
+               
                 // $scope.kid.firstName = ""
                 // $scope.ingredients.recipeName = ""
                 // $scope.ingredients.ingredientLines = ""
                 // $scope.ingredients.totalTime = ""
                 // $scope.ingredients.numberOfServings = ""
 
-            // })
+            })
             
-            $location.url("/HomePageInformation/favoriteRecipes/" + $scope.kid)
+            
 
         }
 

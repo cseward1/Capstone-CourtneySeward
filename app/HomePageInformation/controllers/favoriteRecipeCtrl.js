@@ -11,7 +11,6 @@ angular.module("CapstoneApp")
             })
             console.log("$scope.recipes", $scope.recipes)
         })
-
        
         
     })
