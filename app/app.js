@@ -60,12 +60,14 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
             controller: "errandCtrl",
             // resolve: { isAuth }
         })
-        //     // Routing call to display the nanny LogPage:
-        .when("/HomePageInformation/favoriteRecipes", {
+            // Routing call to display the nanny LogPage:
+            // Passing the kid id into the route parameter
+        .when("/HomePageInformation/favoriteRecipes/:kidid", {
             templateUrl: "app/HomePageInformation/partials/favoriteRecipes.html",
             controller: "favoriteRecipeCtrl",
             // resolve: { isAuth }
         })
+     
         .otherwise('/HomePageInformation/homePage')
 
         // // Routing call to display the kids information on the home page:

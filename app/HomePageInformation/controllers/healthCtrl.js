@@ -62,10 +62,10 @@ angular.module("CapstoneApp")
                 kidid : $scope.kid,
                 recipeName : recipe.recipeName,
                 ingredientLines : recipe.ingredients.ingredientLines,
-                ingredients: recipe.ingredients
-                // totalTime : recipe.totalTime,
+                ingredients: recipe.ingredients,
+                totalTime : recipe.totalTime,
                 // numberOfServings : recipe.numberOfServings
-            }
+            }   
 
             // Use the factory to POST to Firebase
             favoriteRecipeFactory.add(kidrecipe)
@@ -78,7 +78,7 @@ angular.module("CapstoneApp")
 
             // })
             
-            $location.url("/HomePageInformation/favoriteRecipes")
+            $location.url("/HomePageInformation/favoriteRecipes/" + $scope.kid)
 
         }
 
