@@ -43,7 +43,7 @@
 
                 <br>
                 <button ng-click=seeIngredients(recipe.id)>See the Ingredients</button>
-                <div ng-repeat="ingredient in ingredients.ingredientLines">
+                <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
                     {{ingredient}}
                     <br>
                 </div>

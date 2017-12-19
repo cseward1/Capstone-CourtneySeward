@@ -46,20 +46,7 @@ angular
             // &requirePictures=true
             // Take in the Allergy Filter:
             // allowedAllergy[]
-
-            // Display the search list unto the Health Page:
-            // "single": {
-            //     value: function (key) {
-            //         return $http({
-            //             method: "GET",
-            //             url: `https://capstone1-2f9f6.firebaseio.com/errands/${key}/.json`
-            //         }).then(response => {
-            //             return response.data
-            //         })
-            //     }
-            // },
-
-            
+      
 
         })
     })

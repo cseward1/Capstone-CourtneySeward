@@ -33,7 +33,7 @@ angular.module("CapstoneApp")
         }
 
         // Button call to See the Ingredients:
-        $scope.seeIngredients = function (id) {
+        $scope.seeIngredients = function (id) { 
             $scope.showStuff = !$scope.showStuff
             healthFactory.getRecipeIngredients(id).then((ingredients) => {
                 console.log(ingredients)
@@ -61,7 +61,7 @@ angular.module("CapstoneApp")
             let kidrecipe = {   
                 kidid : $scope.kid,
                 recipeName : recipe.recipeName,
-                ingredientLines : recipe.ingredients.ingredientLines,
+                ingredientLines : recipe.ingredientLines,
                 ingredients: recipe.ingredients,
                 totalTime : recipe.totalTime,
                 foodImage: recipe.imageUrlsBySize[90]
@@ -93,57 +93,6 @@ angular.module("CapstoneApp")
     })
 
 
-// // When the form is filled and saved the "click" event will route the user to the home page:
-// angular.module("CapstoneApp")
-// .controller("healthCtrl", function (healthFactory, AllergyFactory, $scope, $location) {
-
-
-//     console.log("the health page is dispalying")
-
-//     // Meta Data from the Yummly App that I hard coded in - didn't understand how to do a "get" request for the meta data
-//     $scope.allergies = AllergyFactory
-//     // function:
-//     // 1. Get the values of the search field, the image, and ingredients with it filtering the allergy selected
-//     $scope.searchRecipe = function (allergy) {
-//         console.log(allergy)
-//         healthFactory.getRecipes($scope.searchString, allergy.allergyCode).then((Recipes) => {
-//             console.log(Recipes)
-//             $scope.$apply(function () {
-//                 $scope.Recipes = Recipes
-//             })
-
-//             $scope.recipeName = ""
-//             $scope.allergySearch = ""
-//         })
-//     }
-
-//     // Button call to See the Ingredients:
-//     $scope.seeIngredients = function (id) {
-//         healthFactory.getRecipeIngredients(id).then((ingredients) => {
-//             console.log(ingredients)
-//             $scope.$apply(function () {
-//                 $scope.ingredients = ingredients
-//             })
-
-//             $scope.recipeName = ""
-//             $scope.ingredientLines = ""
-//             $scope.prepTime = ""
-//             $scope.numberOfServings = ""
-//         })
-//     }
-
-//     // Button call to fire "saveFavoriteRecipe"
-//     $scope.saveFavoriteRecipe = function (recipeName) {
-//         $location.url("/HomePageInformation/favoriteRecipes")
-//         console.log("save this recipe to my favorites!")
-
-//     }
-
-//     // 2. String replace- go through the string and add a plus the api takes a 
-//     // 3.value of the allergy and the string with plus and send to the api
-
-
-// })
 
 
 

@@ -1,6 +1,5 @@
 <!-- this page will display each kids list of favorite foods: -->
 <div>
-    <p>Favorite Recipes</p>
 
     <button ng-click="backtoHealthPage()">Take me back to the health page</button>
 
@@ -23,20 +22,25 @@
                 <br>
                 <!-- <strong>{{ <recipe class="firstName"></recipe> }}:</strong> -->
             <!-- </li>  -->
-       
-   <button ng-click"showIngredients()">Show the Ingredients</button>
-    <!-- show ingredients and prep time: -->
-    <div ng-repeat="ingredient in recipe.ingredients">
-       {{ingredient}}
-        <br>
-        <!-- <strong>:</strong> {{recipe.ingredients}} -->
+          <!-- Grab the image -->
+          <img src="{{recipe.foodImage}}" />
+          <br>
+          <button ng-click=showIngredients(recipe.id)>Show the Ingredients</button>
+          <span ng-hide="showIngredientz">
+                <div  ng-show="showStuff" ng-repeat="ingredient in recipe.ingredients track by $index">
+                        {{ingredient}}
+                        <br>
+                    </div>
+            </span>
+            <span ng-hide="showIngredientz">
+      </ul>
+            
+
+        
+            <!-- show ingredients and prep time: -->
+         
+            
+
+  
     </div>
-
-
-
-    <!-- Grab the image -->
-    <img src="{{recipe.foodImage}}" />
-    <br>
-</ul>
-</div>
 </div>
