@@ -62,6 +62,9 @@ angular.module("CapstoneApp")
             const kid = {
                 "firstName": $scope.kid.firstName,
                 "age": $scope.kid.age,
+                "Birthday": $scope.kid.birthday,
+                "Interests": $scope.kid.interests,
+                "Allergies" : $scope.kid.allergies,
                 "Gender": $scope.kid.gender,
                 "ParentID": user.uid
                 // "employmentEnd": 0
@@ -74,6 +77,9 @@ angular.module("CapstoneApp")
                 $scope.kid.firstName = ""
                 $scope.kid.age = ""
                 $scope.kid.gender = ""
+                $scope.kid.birthday = ""
+                $scope.kid.interests = ""
+                $scope.kid.allergies = ""
             })
 
         

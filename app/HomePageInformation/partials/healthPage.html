@@ -42,13 +42,16 @@
                 <!-- Add to my favorite meal list -->
 
                 <br>
-                <button ng-click=seeIngredients(recipe.id)>See the Ingredients</button>
+                <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button>
+                <div ng-show="selected === $index">
                 <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
-                    {{ingredient}}
+                  {{ingredient}}
                     <br>
                 </div>
+            </div>
                 <br>
-                <div ng-show="showStuff">
+                <div ng-show="selected === $index">
+                    {{$index}}
                     <strong>Number of Servings: </strong> {{ingredients.numberOfServings}}
                     <br>
                     <br>

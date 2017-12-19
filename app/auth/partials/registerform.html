@@ -3,17 +3,17 @@
 <h2>Registration Form</h2>
 <!-- <form>
     <!-- Parent Information: -->
-    <!-- <h4>Parent & Guardian Information:</h4> -->
-    <!-- <div> -->
-        <!-- make required -->
-        <!-- First Name: -->
-        <!-- <input type="text"> -->
-    <!-- </div> -->
-    <!-- <div> -->
-        <!-- make required -->
-        <!-- Last Name: -->
-        <!-- <input type="text"> -->
-    <!-- </div> -->
+<!-- <h4>Parent & Guardian Information:</h4> -->
+<!-- <div> -->
+<!-- make required -->
+<!-- First Name: -->
+<!-- <input type="text"> -->
+<!-- </div> -->
+<!-- <div> -->
+<!-- make required -->
+<!-- Last Name: -->
+<!-- <input type="text"> -->
+<!-- </div> -->
 <!-- </form>  -->
 <!-- Kid Information: -->
 <h4>Your Child's Information:</h4>
@@ -50,11 +50,32 @@
             <option value="18">18</option>
         </select>
     </div>
-    Interests:
-    <div>
 
+
+    <!-- Birthday: -->
+    <div>
+        Birthday:
+        <input type="text" ng-model="kid.birthday">
+    </div>
+
+    <!-- Interests -->
+    <div>
+        Interests:
+        <input type="text" ng-model="kid.interests">
 
     </div>
+    <!-- Allergies -->
+    <div>
+        Allergies:
+        <select name="allergies" ng-model="kid.allergies">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+
     <div>
         <!-- make required -->
         Gender:
@@ -72,7 +93,7 @@
 </form>
 
 <!-- Final Button to save the Data -->
-<br>    
+<br>
 <button ng-click="registerInDatabase()">Register My Family!</button>
 </form>
 

@@ -3,7 +3,7 @@
 angular.module("CapstoneApp")
     .controller("healthCtrl", function (healthFactory, AllergyFactory, favoriteRecipeFactory, kidsFactory, AuthFactory, $scope, $location, $timeout) {
         console.log("the health page is dispalying")
-        $scope.showStuff = false
+        $scope.selected = ""
 
         // Grab acces to the kids names:
         let user = AuthFactory.getUser()
@@ -33,8 +33,12 @@ angular.module("CapstoneApp")
         }
 
         // Button call to See the Ingredients:
-        $scope.seeIngredients = function (id) { 
-            $scope.showStuff = !$scope.showStuff
+        $scope.seeIngredients = function (id, index) { 
+          $scope.selected = index
+          $timeout(
+              
+          )
+          console.log($scope.selected)
             healthFactory.getRecipeIngredients(id).then((ingredients) => {
                 console.log(ingredients)
                 $scope.$apply(function () {
