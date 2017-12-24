@@ -8,6 +8,13 @@
         <strong>Name:</strong> {{ kid.firstName }}
         <br>
     </div> -->
+        <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
+        <!-- <br>Child Name:
+        <select ng-model="kid">
+            <div ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}}
+
+            </div> -->
+
     <div>
 
         <!-- Grab the Recipe Name -->
@@ -34,7 +41,7 @@
                     </div>
                 </form>
             </div>
-            <!-- end stats -->
+            <!-- end stars -->
 
             <!-- Grab the total time for the recipe to cook/make: -->
             <!-- <li class="recipeName">
@@ -51,14 +58,15 @@
                     <br>
                 </div>
             </span>
-            <span ng-hide="showIngredientz">
-                <!-- stars -->
+            <!-- create a button that deletes a favorite meal from the list: -->
+            <div>
+                <button ng-click=deleteFavoriteMeal()>Delete this meal</button>
+            </div>
+            <!-- End delete button now -->
 
-                <!-- stars ended -->
         </ul>
 
-        <!-- create a button that deletes a favorite meal from the list: -->
-
     </div>
+
     <!-- closing divs -->
 </div>

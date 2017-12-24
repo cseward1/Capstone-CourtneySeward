@@ -1,6 +1,5 @@
 // Favorite Recipe Factory:
 
-
 // Posting the Favorite recipe to Firebase:
 angular.module("CapstoneApp")
     .factory("favoriteRecipeFactory", function ($http) {
@@ -10,7 +9,7 @@ angular.module("CapstoneApp")
                 writable: true
             },
             // Post the kids favorite meal unto firebase:
-
+            // first api call to Yummly
             "kidRecipes": {
                 value: function (kidid) {
                     console.log(kidid)
@@ -27,13 +26,14 @@ angular.module("CapstoneApp")
                             this.cache = Object.keys(data).map(key => {
                                 data[key].id = key
                                 return data[key]
-                                
+
                             })
                             console.log(this.cache)
                             return this.cache
                         })
                 }
             },
+            // second call to yummly
             "add": {
                 value: function (recipe) {
                     return firebase.auth().currentUser.getToken(true)
@@ -57,13 +57,25 @@ angular.module("CapstoneApp")
                     return $http({
                         method: "GET",
                         url: `https://capstone1-2f9f6.firebaseio.com/recipe/${key}/.json`,
-                        // url: `https://angular-employees-6727b.firebaseio.com/employees/${key}/.json`
                     }).then(response => {
                         return response.data
                     })
                 }
             },
+            // delete a recipe from firebase and the page:
+            "murder": {
+                value: function (key) {
+                    return $http({
+                        method: "DELETE",
+                        url: `https://capstone1-2f9f6.firebaseio.com/recipe/${key}/.json`,
+                    }).then(response => {
+                        return response.data
+                    })
+                }
+            }
 
-
+            // closing brackets
         })
     })
+
+       
