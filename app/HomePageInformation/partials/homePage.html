@@ -12,13 +12,18 @@
     <!-- Nanny log button -->
     <button ng-click="nannyLogButton()">Daily Nanny Log!</button>
 </div>
-
+<!-- display the kids info on the home page -->
 <div>
     <h4> My Family Info:</h4>
     <div ng-repeat="kid in kidz">
        <strong>Name:</strong> {{ kid.firstName }} <button> <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}">See Favorite Meals</a> </button> <br>
        <strong>Age:</strong>{{ kid.age }} <br>
        <strong>Gender:</strong>{{ kid.Gender }}<br>
-    <br></div>
+       <strong>  Interests:</strong>{{ kid.Interests }} <br>
+       <strong>Birthday:</strong>{{ kid.Birthday }} <br>
+       <strong>Allergies:</strong>{{ kid.Allergies }} <br>
+       <br>
+    </div>
+    <br>
 
 </div>
