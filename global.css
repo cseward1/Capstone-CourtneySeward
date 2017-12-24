@@ -1,0 +1,102 @@
+/* Errand Partial */
+
+/* Styled Classes */
+.errandList {
+list-style: none
+}
+
+
+/* Navigation Styling: */
+nav > ul {
+    padding: 10;
+    padding: 10px;
+    /* border: 1px black; */
+}
+
+nav > ul > span > li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 70px;
+    
+}
+nav > ul > li > a{
+text-decoration: none;
+
+}
+
+/* Log out button */
+.logOutButton {
+    display: top-left;
+
+}
+
+
+/* Health Page: */
+img {
+    width:200px;
+    height:160px;
+
+}
+.recipe{
+    list-style-type: none;
+
+}
+
+.recipeName{
+    list-style-type: none;
+
+}
+
+.recipeBuilder{
+    justify-content: center;
+
+}
+
+/* stars rating */
+.txt-center {
+    text-align: center;
+  }
+  .hide {
+    display: none;
+  }
+  
+  .clear {
+    float: none;
+    clear: both;
+  }
+  
+  .rating {
+      width: 90px;
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+      position: relative;
+  }
+  
+  .rating > label {
+      float: right;
+      display: inline;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      width: 1.1em;
+      cursor: pointer;
+      color: #000;
+  }
+  
+  .rating > label:hover,
+  .rating > label:hover ~ label,
+  .rating > input.radio-btn:checked ~ label {
+      color: transparent;
+  }
+  
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before {
+      content: "\2605";
+      position: absolute;
+      left: 0;
+      color: rgb(14, 13, 9);
+  }
+  /* end stars rating */

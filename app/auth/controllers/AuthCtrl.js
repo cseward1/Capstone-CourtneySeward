@@ -1,4 +1,4 @@
-//  Controller Page for Registration & Log In:
+//  Controller file for the Registration & Log In Page:
 
 angular.module("CapstoneApp")
     .controller("AuthCtrl", function ($scope, $location, AuthFactory) {

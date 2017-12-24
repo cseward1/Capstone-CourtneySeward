@@ -1,0 +1,64 @@
+<!-- this page will display each kids list of favorite foods: -->
+<div>
+
+    <button ng-click="backtoHealthPage()">Take me back to the health page</button>
+
+    <!-- Grab the kids name from firebase: -->
+    <!-- <div>
+        <strong>Name:</strong> {{ kid.firstName }}
+        <br>
+    </div> -->
+    <div>
+
+        <!-- Grab the Recipe Name -->
+        <ul ng-repeat="recipe in recipes">
+            <li class="recipeName">
+                <br>
+                <strong>{{ recipe.recipeName }}</strong>
+            </li>
+            <!-- stars -->
+            <div class="txt-center">
+                <form>
+                    <div class="rating">
+                        <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+                        <label for="star5">☆</label>
+                        <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+                        <label for="star4">☆</label>
+                        <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+                        <label for="star3">☆</label>
+                        <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+                        <label for="star2">☆</label>
+                        <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+                        <label for="star1">☆</label>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+            </div>
+            <!-- end stats -->
+
+            <!-- Grab the total time for the recipe to cook/make: -->
+            <!-- <li class="recipeName">
+                <br>
+                <!-- <strong>{{ <recipe class="firstName"></recipe> }}:</strong> -->
+            <!-- </li>  -->
+            <!-- Grab the image -->
+            <img src="{{recipe.foodImage}}" />
+            <br>
+            <button ng-click=showIngredients(recipe.id)>Show the Ingredients</button>
+            <span ng-hide="showIngredientz">
+                <div ng-show="showStuff" ng-repeat="ingredient in recipe.ingredients track by $index">
+                    {{ingredient}}
+                    <br>
+                </div>
+            </span>
+            <span ng-hide="showIngredientz">
+                <!-- stars -->
+
+                <!-- stars ended -->
+        </ul>
+
+        <!-- create a button that deletes a favorite meal from the list: -->
+
+    </div>
+    <!-- closing divs -->
+</div>

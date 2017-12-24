@@ -1,8 +1,8 @@
-
+// Controller file for Regsitration:
 angular.module("CapstoneApp")
     .controller("RegisterCtrl", function ($scope, $location, AuthFactory, kidsFactory, $timeout) {
         // $scope.auth = {}
-        let userId = AuthFactory.getUser()
+        let user = AuthFactory.getUser()
         // HIDE AND SHOW FOR THE REGISTRATION FORM:
         // hide and show for the first drop down form
         $scope.myvalue = false;
@@ -47,7 +47,7 @@ angular.module("CapstoneApp")
         $timeout(() => {
             if (!kidsFactory.cache) {
                 console.info("No cached data")
-                kidsFactory.list(userId).then(data => {
+                kidsFactory.list(user.uid).then(data => {
                     $scope.kids = data
                 })
             } else {
@@ -62,8 +62,11 @@ angular.module("CapstoneApp")
             const kid = {
                 "firstName": $scope.kid.firstName,
                 "age": $scope.kid.age,
+                "Birthday": $scope.kid.birthday,
+                "Interests": $scope.kid.interests,
+                "Allergies" : $scope.kid.allergies,
                 "Gender": $scope.kid.gender,
-                "ParentID": AuthFactory.getUser()
+                "ParentID": user.uid
                 // "employmentEnd": 0
             }
 
@@ -74,6 +77,9 @@ angular.module("CapstoneApp")
                 $scope.kid.firstName = ""
                 $scope.kid.age = ""
                 $scope.kid.gender = ""
+                $scope.kid.birthday = ""
+                $scope.kid.interests = ""
+                $scope.kid.allergies = ""
             })
 
         
@@ -89,12 +95,5 @@ angular.module("CapstoneApp")
         }
 
     })
-
-
-
-// Notes:
-
-        //   Use the ng-click to check if there is any datain the factory cache each time the user loads a view
-        //   that is bound to this controller
 
 

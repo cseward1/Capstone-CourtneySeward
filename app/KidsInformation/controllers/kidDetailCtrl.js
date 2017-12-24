@@ -8,7 +8,7 @@ angular
          * Use the factory to get the details of a single employee
          */
         kidFactory.single($routeParams.kidId).then(kid => {
-            $scope.kid = 
+            $scope.kid = ""
         })
     }
 )

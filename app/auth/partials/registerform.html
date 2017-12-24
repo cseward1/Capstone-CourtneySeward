@@ -1,20 +1,20 @@
 <!-- Registration Form for first time Users (Parents Only) -->
 
 <h2>Registration Form</h2>
-<form>
+<!-- <form>
     <!-- Parent Information: -->
-    <h4>Parent & Guardian Information:</h4>
-    <div>
-        <!-- make required -->
-        First Name:
-        <input type="text">
-    </div>
-    <div>
-        <!-- make required -->
-        Last Name:
-        <input type="text">
-    </div>
-</form>
+<!-- <h4>Parent & Guardian Information:</h4> -->
+<!-- <div> -->
+<!-- make required -->
+<!-- First Name: -->
+<!-- <input type="text"> -->
+<!-- </div> -->
+<!-- <div> -->
+<!-- make required -->
+<!-- Last Name: -->
+<!-- <input type="text"> -->
+<!-- </div> -->
+<!-- </form>  -->
 <!-- Kid Information: -->
 <h4>Your Child's Information:</h4>
 <form>
@@ -50,6 +50,32 @@
             <option value="18">18</option>
         </select>
     </div>
+
+
+    <!-- Birthday: -->
+    <div>
+        Birthday:
+        <input type="text" ng-model="kid.birthday">
+    </div>
+
+    <!-- Interests -->
+    <div>
+        Interests:
+        <input type="text" ng-model="kid.interests">
+
+    </div>
+    <!-- Allergies -->
+    <div>
+        Allergies:
+        <select name="allergies" ng-model="kid.allergies">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+
     <div>
         <!-- make required -->
         Gender:
@@ -57,121 +83,17 @@
             <option value=""></option>
             <option value="Female">Female</option>
             <option value="Male">Male</option>
-            <option value="Other">Other</option>
+            <!-- <option value="Other">Other</option> -->
         </select>
         <br>
         <button id="saveChild" ng-click="saveChild()">Save this Child?</button>
-        <button id="mybutton" ng-click="myvalue=true">Add another Child?</button>
+        <!-- <button id="mybutton" ng-click="myvalue=true">Add another Child?</button> -->
         <br>
     </div>
 </form>
-
-<!-- Add another child with hide and show: -->
-<form>
-    <!-- second child -->
-    <br>
-    <div ng-show="myvalue">
-        <br>
-        <div>
-            <!-- make name required -->
-            First Name:
-            <input type="text" ng-model="kid2.firstName">
-        </div>
-        <div>
-            <!-- make age required -->
-            Age:
-            <select name="age" ng-model="kid2.age">
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-            </select>
-        </div>
-        <div>
-            <!-- make gender required -->
-            Gender:
-            <select name="gender" ng-model="kid2.gender">
-                <option value=""></option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Other">Other</option>
-            </select>
-            <br>
-            <button id="saveChild" ng-click="saveChild(kid2)">Save this Child?</button>
-            <button id="mybutton" ng-click="my2ndvalue=true">Add another Child?</button>
-        </div>
-</form>
-<!-- third child  -->
-<form>
-    <br>
-    <div ng-show="my2ndvalue">
-        <br>
-        <div>
-            <!-- make name required -->
-            First Name:
-            <input type="text" ng-model="kid3.firstName">
-        </div>
-        <div>
-            <!-- make age required -->
-            Age:
-            <select name="age" ng-model="kid3.age">
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-            </select>
-        </div>
-        <div>
-            <!-- make gender required -->
-            Gender:
-            <select name="gender" ng-model="kid3.gender">
-                <option value=""></option>
-                <option value="Female">Female</option>
-                <option value="Male">Male</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-        <button id="saveChild" ng-click="saveChild(kid3)">Save this Child?</button>
-        <button id="mybutton" ng-click="my2ndvalue=true">Add another Child?</button>
-    </div>
-</form>
-</div>
-
-
-
-
 
 <!-- Final Button to save the Data -->
+<br>
 <button ng-click="registerInDatabase()">Register My Family!</button>
 </form>
 

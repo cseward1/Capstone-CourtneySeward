@@ -35,7 +35,7 @@ angular.module("CapstoneApp")
             }
         },
         getUser: {
-            value: () => firebase.auth().currentUser.uid
+            value: () => currentUserData
         },
         logout: {
             value: () => firebase.auth().signOut()

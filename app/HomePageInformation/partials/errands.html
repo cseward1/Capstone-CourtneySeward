@@ -1,5 +1,40 @@
 <div>
-    <p>Errands and Task Page</p>
+    <h3>Errand and Grocery List</h3>
 
+    <!-- Date the List was Created: -->
+    <div>
+        <p>{{ today | date : "'Date:' MMMM d, y" }}</p>
+    </div>
+
+    <!-- Enter Store Name: -->
+    <div>
+        <strong>Store Name:</strong>
+        <br>
+        <input type="text" ng-model="storeName"> {{errand.storeName}}
+    </div>
+
+    <div>
+        <br>
+        
+    </div>
+
+    <!-- bind it to the application with the ng-model directive -->
+    <input ng-model="itemName">
+
+    <!-- create an "Add Me" Button -->
+    <button placeholder="Item you wish to Purchase" ng-click="saveListItem()">Add</button>
+
+
+    <!-- Begin Writing Your list: -->
+    <ul ng-repeat="(key, value) in errandList | groupBy: 'storeName'">
+        <h1>{{key}}</h1>
+        <li class="errandList" ng-repeat="errand in value">
+
+            {{errand.listItem}}
+            <button ng-click="deleteListItem(errand)">Delete</button>
+            <button ng-click="GotItem"> Got It!</button>
+
+        </li>
+    </ul>
 
 </div>

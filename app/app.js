@@ -1,4 +1,4 @@
-angular.module("CapstoneApp", ["ngRoute"])
+angular.module("CapstoneApp", ["ngRoute", "angular.filter"])
 
 const isAuth = AuthFactory => new Promise((resolve, reject) => {
     if (AuthFactory.isAuthenticated()) {
@@ -49,23 +49,25 @@ angular.module("CapstoneApp").config(function ($routeProvider) {
         })
         
         // Routing Calls for the Buttons on the Home Page:
-        .when("/healthPage", {
+        .when("/HomePageInformation/healthPage", {
             templateUrl: "app/HomePageInformation/partials/healthPage.html",
             controller: "healthCtrl",
             // resolve: { isAuth }
         })
             // Routing call to display the Errands Page:
-        .when("/errandsPage", {
+        .when("/HomePageInformation/errands", {
             templateUrl: "app/HomePageInformation/partials/errands.html",
             controller: "errandCtrl",
             // resolve: { isAuth }
         })
-        //     // Routing call to display the nanny LogPage:
-        .when("/nannyLogButton", {
-            templateUrl: "app/HomePageInformation/partials/nannyLog.html",
-            controller: "nannylogCtrl",
+            // Routing call to display the nanny LogPage:
+            // Passing the kid id into the route parameter
+        .when("/HomePageInformation/favoriteRecipes/:kidid", {
+            templateUrl: "app/HomePageInformation/partials/favoriteRecipes.html",
+            controller: "favoriteRecipeCtrl",
             // resolve: { isAuth }
         })
+     
         .otherwise('/HomePageInformation/homePage')
 
         // // Routing call to display the kids information on the home page:
