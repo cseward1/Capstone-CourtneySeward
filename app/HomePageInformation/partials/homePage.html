@@ -1,10 +1,11 @@
 <!-- The Home Page Index After you Succesfully Log-In -->
+
 <div>
     <!-- Welcome Message! -->
     <h2>LunchBox</h2>
     <!-- <p>Welcome to your Dashboard.</p> -->
 
-<!-- Buttons displaying on the main page: -->
+    <!-- Buttons displaying on the main page: -->
     <!-- Health Page Button -->
     <button ng-click="healthButton()">Health & Food Alleriges</button>
     <!-- Errand Page Button -->
@@ -15,15 +16,35 @@
 <!-- display the kids info on the home page -->
 <div>
     <h4> My Family Info:</h4>
-    <div ng-repeat="kid in kidz">
-       <strong>Name:</strong> {{ kid.firstName }} <button> <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}">See Favorite Meals</a> </button> <br>
-       <strong>Age:</strong>{{ kid.age }} <br>
-       <strong>Gender:</strong>{{ kid.Gender }}<br>
-       <strong>  Interests:</strong>{{ kid.Interests }} <br>
-       <strong>Birthday:</strong>{{ kid.Birthday }} <br>
-       <strong>Allergies:</strong>{{ kid.Allergies }} <br>
-       <br>
+   
+        <!-- childs picture -->
+        <img src="" alt="" style="width:100%">
+        {{kid.image}}
+        <!-- <div class="HomePagecontainer"> -->
+            <!-- need the image to go here: -->
+            <div ng-repeat="kid in kidz">
+                    <div class="HomePagecard">
+                <div class="HomePagecontainer">
+               <h4> <strong> {{ kid.firstName }}</strong></h4>
+                <button>
+                    <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}">See Favorite Meals</a>
+                </button>
+                <!-- <p> <strong></strong>{{ kid.image }}</p>  -->
+                <p> <strong>Age:</strong>{{ kid.age }}</p>              
+                <p><strong>Gender:</strong>{{ kid.Gender }}</p>               
+                <p><strong> Interests:</strong>{{ kid.Interests }}</p>               
+                <p><strong>Birthday:</strong>{{ kid.Birthday }}</p> 
+                <p><strong>Allergies:</strong>{{ kid.Allergies }}</p>
+            </div>
+                <br>
+            </div>
+        </div>
     </div>
-    <br>
+ <br>
 
-</div>
+
+
+    <!-- <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+    Try it Yourself » -->
+
+

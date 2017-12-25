@@ -1,3 +1,35 @@
+
+
+/* HomePagePartial */
+
+/* contanier css that holds the childs information */
+.HomePagecard {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    float: left;
+  
+}
+
+.HomePagecard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.HomePagecontainer {
+    padding: 2px 16px;
+    border: 2px, black;
+   
+}
+
+/* input the image of the child */
+/* .image-upload > input
+{
+    display: none;
+} */
+
+
+
+
 /* Errand Partial */
 
 /* Styled Classes */

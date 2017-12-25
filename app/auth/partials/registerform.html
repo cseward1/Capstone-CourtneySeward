@@ -19,6 +19,14 @@
 <h4>Your Child's Information:</h4>
 <form>
     <!-- first Child -->
+    <!-- upload an image -->
+   <div class="image-upload">
+        <label for="file-input">
+            <img src="placeholder.jpg" />
+        </label>
+
+        <input id="file-input" type="file" ng-model="kid.image"/>
+    </div> 
     <div>
         <!-- make required -->
         First name:

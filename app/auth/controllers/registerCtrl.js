@@ -60,6 +60,7 @@ angular.module("CapstoneApp")
         $scope.saveChild = function () {
             console.log("user!", firebase.auth().currentUser.id)
             const kid = {
+                "image":$scope.kid.image,
                 "firstName": $scope.kid.firstName,
                 "age": $scope.kid.age,
                 "Birthday": $scope.kid.birthday,
@@ -74,6 +75,7 @@ angular.module("CapstoneApp")
              * Use the factory to POST to Firebase
              */
             kidsFactory.add(kid).then(() => {
+                $scope.kid.image = ""
                 $scope.kid.firstName = ""
                 $scope.kid.age = ""
                 $scope.kid.gender = ""
