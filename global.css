@@ -1,31 +1,198 @@
 
 
+/* body */
+
+/* Navigation Styling: */
+ nav > ul {
+    padding: 10;
+    padding: 10px;
+    
+}
+
+nav > ul > span > li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 70px; 
+    border: 30px black; 
+    
+}
+nav > ul > li > a{
+text-decoration: none;
+}
+    
+
+.navigation {
+    font-family: 'Barlow', sans-serif;
+}
+
+
+
+
+/* log out button */
+.logOutButton {
+    line-height: 32px;
+    width: 80px;
+    height: 30px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-top: 22px;
+    margin-right: 80px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+/* Log out button */
+.logOutButton {
+    display: top-left;
+
+}
+
+
+
+/* Footer Styling for Global CSS */
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2309a533;
+    height: 50px;
+    align-items: center;
+    padding: 40px 50px;
+    /* box-shadow: 0px -12px 4px 1px rgba(0, 0, 0, .2);   */
+    left:0px;
+    bottom:0px;
+    height:auto;
+    width:100%;
+    position: fixed;
+    margin-top: 30px;  
+    z-index: 20;
+}
+
+footer p {
+    margin: 0;
+    color: #111312;    
+    font-size: .9em;  
+      font-style: 'Bellefair', serif; 
+      z-index: 20;}
+    
+    
+#contact {
+    text-align: left;
+}
+
+#hours {
+    text-align: center;
+}
+
+#copyright {
+    text-align: right;
+}
+
+.bold {
+    font-size:1.5em;
+}
+
+
 /* HomePagePartial */
+/* banner */
+#banner {
+    /* background-image: url(/images/kidsImage.jpg); */
+    background-position: center center;
+    background-size: cover;
+    color: #6632324f;
+    padding: 6em 0em 6em;
+    text-align: center;
+}
+
+    #banner :last-child {
+        margin-bottom: 0;
+    }
+
+    #banner h2 {
+        color: #130d0d;
+        font-size: 4em;
+        line-height: 1.25em;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+
+    #banner p {
+        font-size: 1.5em;
+        margin-bottom: 1.75em;
+    }
+
+
+/* section 1 of the HomePage*/
+
+.section1 {
+    /* border: 1px black; */
+    background-color: rgba(218, 210, 210, 0.26);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: 10px;
+   
+}
+.sectionOne{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    display: inline;
+    justify-content: center;
+
+}
+.healthDetails {
+    font-size: 15px;
+}
+errandDetails{
+    font-size: 15px;
+}
+
+.homepageh2 {
+    font-family: 'Barlow', sans-serif;
+}
+
+.homepageTitle {
+    font-family: 'Gloria Hallelujah', cursive;
+}
 
 /* contanier css that holds the childs information */
 .HomePagecard {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(22, 4, 65, 0.2);
     transition: 0.3s;
-    width: 40%;
+    /* width: 20%; */
     float: left;
+    width: 25%;
+     border-radius: 5px;
+     /* font-family: 'Indie Flower', cursive; */
+     font-family: 'Gloria Hallelujah', cursive;
+    /* clear: both; */
+    /* margin: auto; */
+    /* margin: auto; */
+    
   
 }
 
 .HomePagecard:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 70px 80px 0 rgba(12, 2, 48, 0.2);
+    
 }
 
 .HomePagecontainer {
-    padding: 2px 16px;
-    border: 2px, black;
-   
+    margin-bottom: 150px;
+    padding: 2px 30px;
+    padding-bottom: 20px;
+    /* border: 1px, black; */
+    
+    /* margin: auto; */
+    /* width: 100px; */
+    /* content: justify-content; */
+   /* width: 150px;
+   height:350px;  */
+   /* margin: auto; */
 }
 
-/* input the image of the child */
-/* .image-upload > input
-{
-    display: none;
-} */
+
 
 
 
@@ -38,29 +205,6 @@ list-style: none
 }
 
 
-/* Navigation Styling: */
-nav > ul {
-    padding: 10;
-    padding: 10px;
-    /* border: 1px black; */
-}
-
-nav > ul > span > li {
-    display: inline;
-    list-style-type: none;
-    margin: 0 70px;
-    
-}
-nav > ul > li > a{
-text-decoration: none;
-
-}
-
-/* Log out button */
-.logOutButton {
-    display: top-left;
-
-}
 
 
 /* Health Page: */
@@ -84,6 +228,11 @@ img {
 
 }
 
+
+
+
+
+
 /* stars rating */
 .txt-center {
     text-align: center;
@@ -106,12 +255,12 @@ img {
   }
   
   .rating > label {
-      float: right;
+      /* float: right; */
       display: inline;
       padding: 0;
       margin: 0;
       position: relative;
-      width: 1.1em;
+      /* width: 1.1em; */
       cursor: pointer;
       color: #000;
   }

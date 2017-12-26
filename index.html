@@ -16,12 +16,15 @@
 
     <!-- Style Sheet: -->
     <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Gloria+Hallelujah|Indie+Flower" rel="stylesheet">
 </head>
 <!-- initiate Angular: -->
 
 <body ng-app="CapstoneApp">
 
     <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+    
 
     <!-- creating a a log out button: -->
     <!-- keep the logout button above the view so it will always display -->
@@ -30,10 +33,11 @@
     </nav>
 
     <div ng-view></div>
-    <nav ng-include="'app/navigation/partials/footer.html'"></nav>
+    <!-- <nav ng-include="'app/navigation/partials/footer.html'"></nav> -->
 
     <!-- Add a footer:  -->
     <nav ng-include="'app/navigation/partials/footer.html'"></nav>
+     <!-- Footer for all pages besides the index -->
 
 
     <!-- Scripts Begin: -->

@@ -1,5 +1,5 @@
 
-<ul ng-controller="NavCtrl">
+<ul ng-controller="NavCtrl" class="navigation">
         <span ng-if="isAuthenticated()">
         <li><a href="/#!/HomePageInformation/healthPage">Health Page</a></li>
         <li><a href="/#!/HomePageInformation/favoriteRecipes">Favorite Recipes</a></li>
@@ -7,7 +7,7 @@
         <li><a href="/#!/HomePageInformation/homePage">Home Page</a></li>
         <li class="align-right">
                 
-                     <a href="#" ng-click="logout()">Logout <span>{{ email }}</span></a>
+                     <!-- <a href="#" ng-click="logout()">Logout <span>{{ email }}</span></a> -->
                     </li>
  
             </span>
