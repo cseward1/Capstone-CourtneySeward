@@ -1,37 +1,35 @@
 <div>
     <div>
-      
-        <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
-        <br>Child Name:
-            <select ng-model="kid">
-                <option value=""></option>
-                <option ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}} </option>
-
-            </select>
+        <!-- Select the kids name: -->
+        <div class="stlyeSearchBar">
+        <!-- <br>Child Name: -->
         
-
-        Food Allergy:
-       
-        <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
+        <select class="searchBar1" ng-model="kid">
+            <option value="" disabled selected> Select a Child's Name</option>
+            <option ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}} </option>
         </select>
-    
+
+        <!-- select your food allergy: -->
+        <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies" >
+                <option value="" disabled selected> Select a Food Allergy</option>
+        </select>
+        
 
 
         <!-- Search for recipes -->
-        Search for Recipes:
-        <input value=text ng-model="searchString" placeholder="Search Recipes">
-
+        <input class="searchBar" value=text ng-model="searchString" placeholder="    Type in an Ingredient or Meal Idea">
+    
 
         <!-- Create a Search Button that takes both the filtered allergy and the search form -->
-        <button ng-click="searchRecipe(selectedAllergy)">Search</button>
-
+        <button class= "searchRecipeButton" ng-click="searchRecipe(selectedAllergy)">Search</button>
+    </div>
         <!-- List the Recipes -->
-        <div>
-            <ul ng-repeat="recipe in Recipes" class="Recipe">
-                <li class="recipeName">
+        <div> 
+            <ul class="listOfRecipes" ng-repeat="recipe in Recipes">
+                <li>
                     <br>
-                    <strong>{{ recipe.recipeName }}:</strong>
-                    
+                    <strong>{{ recipe.recipeName }}</strong>
+
                 </li>
                 <!-- nested ng-repeat to grab the ingredients -->
                 <!-- <div ng-repeat="ingredient in recipe.ingredients">
@@ -44,11 +42,11 @@
                 <br>
                 <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button>
                 <div ng-show="selected === $index">
-                <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
-                  {{ingredient}}
-                    <br>
+                    <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
+                        {{ingredient}}
+                        <br>
+                    </div>
                 </div>
-            </div>
                 <br>
                 <div ng-show="selected === $index">
                     {{$index}}

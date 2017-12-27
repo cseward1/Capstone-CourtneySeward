@@ -14,54 +14,72 @@
             <h2 class="homepageh2">What would you like to do today?</h2>
             <br>
             <ul>
+                <!-- Health and Food Allergy Button -->
                 <li class="fa fa-cutlery fa-5x" aria-hidden="true">
-                   <p class="healthDetails">Find recipes for your kids with <br>specific food allerfies!</p> 
-                    <button ng-click="healthButton() ">Health & Food Alleriges</button>
+                    <br>
+                    <p class="healthDetails">Search for recipes that factor in your child's
+                        <br> specific food allerfies!</p>
+                    <button ng-click="healthButton()">Health & Food Alleriges</button>
                 </li>
+
                 <!-- Errand Page Button -->
-                <li class="fa fa-shopping-cart fa-5x" aria-hidden="true"><br>
-                 <!-- <p class="errandDetails">Write down errands down for your child's caregiver <br>to buy!</p>  -->
+                <li class="fa fa-shopping-cart fa-5x" aria-hidden="true">
+                    <br>
+                    <p class="errandDetails">Write down errands for
+                        <br>your child's caregiver to buy today!</p>
                     <button ng-click="errandsButton()">Errands for the Day!</button>
-                </li>
-                <!-- Nanny log button -->
-                <button ng-click="nannyLogButton()">Daily Nanny Log!</button>
-            </ul>
+
+                    <!-- favorite food  button -->
+                    <li class="fa fa-search fa-5x" aria-hidden="true">
+
+                        <p class="favoriteFoodDetails">See each child's favorite recipe choices!</p>
+                        <div ng-repeat="kid in kidz">
+                            <!-- <strong class="kidNames"> {{ kid.firstName }}</strong> -->
+                            <button class="measurments">
+                                <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}"> {{ kid.firstName }}</a>
+                            </button>
+                        </div>
+                        <!-- <button ng-click="nannyLogButton()">Daily Nanny Log!</button> -->
+                    </li>
         </div>
-    </section>
+        </ul>
+</div>
+</section>
 
-    <!-- display the kids info on the home page -->
-    <div>
-        <!-- <h4> My Family Info:</h4> -->
+<!-- display the kids info on the home page -->
+<div>
+    <!-- <h4> My Family Info:</h4> -->
 
-        <!-- childs picture -->
-        <img src="" alt="" style="width:100%"> {{kid.image}}
-        <!-- <div class="HomePagecontainer"> -->
-        <!-- need the image to go here: -->
-        <div ng-repeat="kid in kidz">
-            <div class="HomePagecard">
-                <div class="HomePagecontainer">
-                    <h1>
-                        <strong> {{ kid.firstName }}</strong>
-                    </h1>
-                    <button>
-                        <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}">See Favorite Meals</a>
-                    </button>
-                    <!-- <p> <strong></strong>{{ kid.image }}</p>  -->
-                    <p>
-                        <strong>Age:</strong>{{ kid.age }}</p>
-                    <p>
-                        <strong>Gender:</strong>{{ kid.Gender }}</p>
-                    <p>
-                        <strong> Interests:</strong>{{ kid.Interests }}</p>
-                    <p>
-                        <strong>Birthday:</strong>{{ kid.Birthday }}</p>
-                    <p>
-                        <strong>Allergies:</strong>{{ kid.Allergies }}</p>
-                </div>
-                <br>
+    <!-- childs picture -->
+    <img src="" alt="" style="width:100%"> {{kid.image}}
+    <!-- <div class="HomePagecontainer"> -->
+    <!-- need the image to go here: -->
+    <div ng-repeat="kid in kidz">
+        <div class="HomePagecard">
+            <div class="HomePagecontainer">
+                <h1>
+                    <strong> {{ kid.firstName }}</strong>
+                </h1>
+                <!-- <button>
+                    <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}">See Favorite Meals</a>
+                </button> -->
+                <p>
+                    <strong></strong>{{ kid.image }}</p>
+                <p>
+                    <strong>Age:</strong>{{ kid.age }}</p>
+                <p>
+                    <strong>Gender:</strong>{{ kid.Gender }}</p>
+                <p>
+                    <strong> Interests:</strong>{{ kid.Interests }}</p>
+                <p>
+                    <strong>Birthday:</strong>{{ kid.Birthday }}</p>
+                <p>
+                    <strong>Allergies:</strong>{{ kid.Allergies }}</p>
             </div>
+            <br>
         </div>
     </div>
+</div>
 
 </div>
 <br>
