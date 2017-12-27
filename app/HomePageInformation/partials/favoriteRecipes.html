@@ -18,30 +18,12 @@
     <div>
 
         <!-- Grab the Recipe Name -->
-        <ul ng-repeat="recipe in recipes">
+        <ul class="listOfRecipes" ng-repeat="recipe in recipes" >
             <li class="recipeName">
                 <br>
                 <strong>{{ recipe.recipeName }}</strong>
             </li>
-            <!-- stars -->
-            <div class="txt-center">
-                <form>
-                    <div class="rating">
-                        <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
-                        <label for="star5">☆</label>
-                        <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
-                        <label for="star4">☆</label>
-                        <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
-                        <label for="star3">☆</label>
-                        <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
-                        <label for="star2">☆</label>
-                        <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
-                        <label for="star1">☆</label>
-                        <div class="clear"></div>
-                    </div>
-                </form>
-            </div>
-            <!-- end stars -->
+     
 
             <!-- Grab the total time for the recipe to cook/make: -->
             <!-- <li class="recipeName">
@@ -63,7 +45,25 @@
                 <button ng-click=deleteFavoriteMeal()>Delete this meal</button>
             </div>
             <!-- End delete button now -->
-
+       <!-- stars -->
+       <!-- <div class="txt-center">
+            <form>
+                <div class="rating">
+                    <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" />
+                    <label for="star5">☆</label>
+                    <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" />
+                    <label for="star4">☆</label>
+                    <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" />
+                    <label for="star3">☆</label>
+                    <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" />
+                    <label for="star2">☆</label>
+                    <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" />
+                    <label for="star1">☆</label>
+                    <div class="clear"></div>
+                </div>
+            </form>
+        </div> -->
+        <!-- end stars -->
         </ul>
 
     </div>
