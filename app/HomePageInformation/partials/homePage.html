@@ -15,29 +15,31 @@
             <br>
             <ul>
                 <!-- Health and Food Allergy Button -->
-                <li class="fa fa-cutlery fa-5x" aria-hidden="true">
+                <li class="fa fa-cutlery fa-5x" aria-hidden="true" ng-click="healthButton()">
                     <br>
                     <p class="healthDetails">Search for recipes that factor in your child's
                         <br> specific food allerfies!</p>
-                    <button class="searchRecipeButton" ng-click="healthButton()">Health & Food Alleriges</button>
+                    <!-- <button class="searchRecipeButton" ng-click="healthButton()">Health & Food Alleriges</button> -->
                 </li>
 
                 <!-- Errand Page Button -->
-                <li class="fa fa-shopping-cart fa-5x" aria-hidden="true">
+                <li class="fa fa-shopping-cart fa-5x" aria-hidden="true" ng-click="errandsButton()">
                     <br>
                     <p class="errandDetails">Write down errands for
                         <br>your child's caregiver to buy today!</p>
-                    <button ng-click="errandsButton()">Errands for the Day!</button>
+                    <!-- <button ng-click="errandsButton()">Errands for the Day!</button> -->
+                    </li>
 
                     <!-- favorite food  button -->
                     <li class="fa fa-search fa-5x" aria-hidden="true">
 
-                        <p class="favoriteFoodDetails">See each child's favorite recipe choices!</p>
-                        <div ng-repeat="kid in kidz">
+                        <p class="favoriteFoodDetails">See each child's favorite recipe choices! <br><br></p>
+                        
+                        <div class="divforKidsNames" ng-repeat="kid in kidz">
                             <!-- <strong class="kidNames"> {{ kid.firstName }}</strong> -->
-                            <button class="measurments">
-                                <a href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}"> {{ kid.firstName }}</a>
-                            </button>
+                            <!-- <button > -->
+                                <a class="childNamesButton"href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}"> {{ kid.firstName }}</a>
+                            <!-- </button> -->
                         </div>
                         <!-- <button ng-click="nannyLogButton()">Daily Nanny Log!</button> -->
                     </li>

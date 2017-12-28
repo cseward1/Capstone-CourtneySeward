@@ -21,8 +21,13 @@
     
 
         <!-- Create a Search Button that takes both the filtered allergy and the search form -->
-        <button class= "searchRecipeButton" ng-click="searchRecipe(selectedAllergy)">Search</button>
-    </div>
+        <button class= "searchRecipeButtonn" ng-click="searchRecipe(selectedAllergy)">Search</button>
+       </div>
+
+         <!-- name of nannydo in the middle of the page -->
+         <!-- <div class="healthPagecomponent"> -->
+                <!-- <h2>Nannydo</h2> -->
+           
         <!-- List the Recipes -->
         <div> 
             <ul class="listOfRecipes" ng-repeat="recipe in Recipes">
@@ -60,8 +65,8 @@
                 <br>
                 <button ng-click="saveFavoriteRecipe(recipe)">Add to My Favorite Meal List!</button>
             </ul>
-
         </div>
+        <!-- </div> -->
 
     </div>
 </div>
