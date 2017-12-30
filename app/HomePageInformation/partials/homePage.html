@@ -2,9 +2,8 @@
 <div>
     <div id="banner">
         <!-- Welcome Message! -->
-
         <h2 class="homepageTitle">hi. welcome to Nannydo</h2>
-        <!-- <p>Welcome to your Dashboard.</p> -->
+       
 
         <!-- Buttons displaying on the main page: -->
     </div>
@@ -12,8 +11,9 @@
     <section class="section1">
         <div class="sectionOne">
             <h1 class="homepageh2">What would you like to do today?</h1>
-            <br>
-            <ul>
+            <ul class="taskList">
+                    <br>
+                    <br>
                 <!-- Health and Food Allergy Button -->
                 <li class="fa fa-cutlery fa-5x" aria-hidden="true" ng-click="healthButton()">
                     <br>
@@ -27,6 +27,9 @@
                     <br>
                     <p class="errandDetails">Write down errands for
                         <br>your child's caregiver to buy today!</p>
+                     
+                     
+                        
                     <!-- <button ng-click="errandsButton()">Errands for the Day!</button> -->
                     </li>
 
@@ -34,13 +37,13 @@
                     <li class="fa fa-search fa-5x" aria-hidden="true">
 
                         <p class="favoriteFoodDetails">See each child's favorite recipe choices! <br><br></p>
-                        
                         <div class="divforKidsNames" ng-repeat="kid in kidz">
                             <!-- <strong class="kidNames"> {{ kid.firstName }}</strong> -->
                             <!-- <button > -->
                                 <a class="childNamesButton"href="#!/HomePageInformation/favoriteRecipes/{{kid.id}}"> {{ kid.firstName }}</a>
                             <!-- </button> -->
                         </div>
+                        <br>
                         <!-- <button ng-click="nannyLogButton()">Daily Nanny Log!</button> -->
                     </li>
         </div>
