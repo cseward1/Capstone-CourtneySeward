@@ -64,10 +64,12 @@ angular.module("CapstoneApp")
             },
             // delete a recipe from firebase and the page:
             "murder": {
-                value: function (key) {
+                value: function (recipe) {
+                      return firebase.auth().currentUser.getToken(true)
+            .then(idToken => {
                     return $http({
                         method: "DELETE",
-                        url: `https://capstone1-2f9f6.firebaseio.com/recipe/${key}/.json`,
+                        url: `https://capstone1-2f9f6.firebaseio.com/recipe/.json?auth=${idToken}`})
                     }).then(response => {
                         return response.data
                     })

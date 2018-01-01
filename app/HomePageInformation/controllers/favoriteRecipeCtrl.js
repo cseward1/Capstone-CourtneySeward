@@ -41,7 +41,7 @@ angular.module("CapstoneApp")
 
         // get the delete button to work:
         $scope.deleteFavoriteMeal = () =>
-            favoriteRecipeFactory.murder($routeParams.key).then(() =>
+            favoriteRecipeFactory.murder($routeParams.kidid).then(() =>
                 $location.url("/"))
 
     })
