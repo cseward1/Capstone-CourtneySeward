@@ -90,7 +90,7 @@
     }
     
     
-  }
+  
 
 
 /* end register or log in page */
@@ -120,7 +120,7 @@ nav > ul > span {
     
 .navigation {
     font-family: 'Barlow', sans-serif;
-    background-color: #2309a533;
+    background-color:  #2309a533;
     box-shadow: 0px -12px 4px 1px rgba(0, 0, 0, .2);  
     height: 130px;
     justify-content: space-between;
@@ -132,7 +132,8 @@ nav > ul > span {
 	outline: none;
 	display: inline-block;
 	margin: 0.5em;
-	padding: 0.9em 1.1em;
+    /* padding: 0.9em 1.1em; */
+    padding: 20px;
 	border: 2.5px solid rgb(65, 20, 78);
 	color: rgb(12, 10, 10);
     font-weight: 700;
@@ -151,8 +152,9 @@ nav > ul > span {
 	outline: none;
     display: inline-block;
     /* margin-left: 20px; */
-	margin: 70px;
-	padding: 0.9em 1.1em;
+    margin: 80px;
+    padding:20px;
+	/* padding: 0.9em 1.1em; */
 	border: 2.5px solid rgb(65, 20, 78);
 	color: rgb(12, 10, 10);
     font-weight: 700;
@@ -170,9 +172,10 @@ nav > ul > span {
 .errandPage{
 	text-decoration: none;
 	outline: none;
-	display: inline-block;
+    display: inline-block;
+    padding: 20px;
 	/* margin-left: 200px; */
-	padding: 0.9em 1.1em;
+	/* padding: 0.9em 1.1em; */
 	border: 2.5px solid rgb(65, 20, 78);
 	color: rgb(12, 10, 10);
     font-weight: 700;
@@ -187,25 +190,44 @@ nav > ul > span {
 /* nav button styling ends */
 
 /* log out button */
-.logOutButton {
-    line-height: 32px;
-    width: 60px;
-    height: 30px;
+ /* .logOutButton { */
+    /* line-height: 32px; */
+    /* width: 60px; */
+    /* height: 30px; */
     /* padding-bottom: 10px; */
-    font-size: 8pt;
-    font-family: tahoma;
-    margin-top: 40px;
-    margin-right: 100px;
+    /* font-size: 8pt; */
+    /* font-family: tahoma; */
+    /* margin-top: 40px; */
+    /* margin-right: 100px; */
     /* padding: 20px; */
-    position:absolute;
-    top:0;
-    right:0;
-}
+    /* position:absolute; */
+    /* top:0; */
+    /* right:0; */
+/* }  */
 
 /* Log out button */
-.logOutButton {
+/* .logOutButton {
     display: top-left;
 
+} */
+
+.logOutButton{
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+    margin: 80px;
+    padding:20px;
+	border: 2.5px solid rgb(65, 20, 78);
+	color: rgb(12, 10, 10);
+    font-weight: 700;
+    /* padding-top: 20px; */
+    margin-top: 30px;
+
+}
+
+.logOutButton:hover {
+    background-color: rgb(255, 255, 255);
+	opacity: 0.6;
 }
 
 
@@ -293,21 +315,24 @@ footer p {
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 10px;
+    height:400px;
    
 }
 .sectionOne{
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    /* width: 500px; */
     display: inline;
     justify-content: center;
 
 }
 
-.taskList{
+/* .taskList{
 display: inline-block;
+height:25px;
+padding-bottom: 50px;
 
-}
+} */
 .healthDetails {
     font-size: 15px;
     font-family: 'Barlow', sans-serif;
@@ -326,6 +351,8 @@ display: inline-block;
 .homepageh2 {
     font-family: 'Barlow', sans-serif;
     font-size: 35px;
+    margin-bottom: 0;
+    /* margin-top:0; */
 }
 
 .homepageTitle {
@@ -400,7 +427,7 @@ display: inline-block;
 .HomePagecontainer {
     margin-bottom: 20px;
     padding: 2px 30px;
-    padding-bottom: 20px;
+    padding-bottom: 80px;
 }
 
 .kidInKidz{
@@ -419,25 +446,27 @@ display: inline-block;
     margin-left: 10px;
     /* padding: 5px; */
     /* margin-left: 75px; */
+    font: 60px;
 }
 
 .stlyeSearchBar{
+    /* font: 60px; */
     border: inset;
     /* border-radius: 120px; */
     padding-top: 21px;
     padding-bottom: 21px;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
     font-family: 'Barlow', sans-serif;
     font-size: 25px;
-    width:1359px;
+    width:1410px;
     position: absolute;
     height: 50px;
     /* width: 400px; */
-    margin: -100px 0 0 -200px;
+    margin: -100px 0 90px -200px;
+
     top: 31%;
-    left: 15%;
-    
+    left: 15%;  
    
     /* margin-top: 50px; */
     background-color:hsla(207, 84%, 23%, 0.090);
@@ -472,6 +501,7 @@ display: inline-block;
 
 /* when someone clicks the search bar this will style the recipes that are displayed */
 .listOfRecipes{
+    margin-top: 60px;
     display: inline-block;
     width: 200px;
     height: 100px;
@@ -480,6 +510,7 @@ display: inline-block;
     font-family: 'Barlow', sans-serif;
     text-align: center;
     font-weight: bold;
+    padding-top: 80px;
     /* padding: 20px; */
     
 }
@@ -509,7 +540,24 @@ display: inline-block;
 	cursor: default;
 }
 
+/* favorite recipe page*/
+.listOfFavoriteRecipes{
+    margin-top: 60px;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+    list-style-type: none;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    /* padding-top: 80px; */
+    /* padding: 20px; */
+    
+}
 
+
+/* end favorite recipe page */
 
 /* card display */
 /* .cardLabel {
