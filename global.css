@@ -662,6 +662,44 @@ color: purple;
 }
 
 /* end search bar styling */
+
+
+/* start flip card  */
+.recipeContainer { 
+    width: 200px;
+    height: 260px;
+    position: relative;
+    perspective: 800px;
+  }
+
+  #recipeInfoCard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: right center; 
+  }
+
+  #recipeInfoCard figure{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+
+#recipeInfoCard.flipped {
+    transform: translateX( -100% ) rotateY( -180deg );
+  }
+
+  .hide {
+visibility: hidden;
+  }
+
+/* end flip card */
 /* The component class creates space betweem the h2(the transparent text "Jackel Audio" and the section class that holds the reviews */
 .healthPagecomponent {
 	position: relative;

@@ -32,13 +32,23 @@ angular.module("CapstoneApp")
             })
         }
 
+       
+        // add hide and show
+        // $scope.showMe = true;
+        // $scope.hideMe = true;
+        $scope.myFunc = function (e) {
+            console.log(e.currentTarget)
+        }
+        // end hide and show
+
+
         // Button call to See the Ingredients:
-        $scope.seeIngredients = function (id, index) { 
-          $scope.selected = index
-          $timeout(
-              
-          )
-          console.log($scope.selected)
+        $scope.seeIngredients = function (id, index) {
+            $scope.selected = index
+            //   $timeout(
+
+            //   )
+            console.log($scope.selected)
             healthFactory.getRecipeIngredients(id).then((ingredients) => {
                 console.log(ingredients)
                 $scope.$apply(function () {
@@ -53,43 +63,44 @@ angular.module("CapstoneApp")
         }
 
 
+
         // Trying to Post into Firebase:
         // Button call to fire "saveFavoriteRecipe"
-        $scope.saveFavoriteRecipe = function ( recipe) {
+        $scope.saveFavoriteRecipe = function (recipe) {
 
             console.log("$scope.kid", $scope.kid)
             console.log("recipe", recipe)
             console.log("save this recipe to my favorites!")
             // save the actual recipe to firebase in this function with the kids name
 
-            let kidrecipe = {   
-                kidid : $scope.kid,
-                recipeName : recipe.recipeName,
-                ingredientLines : recipe.ingredientLines,
+            let kidrecipe = {
+                kidid: $scope.kid,
+                recipeName: recipe.recipeName,
+                ingredientLines: recipe.ingredientLines,
                 ingredients: recipe.ingredients,
-                totalTime : recipe.totalTime,
+                totalTime: recipe.totalTime,
                 foodImage: recipe.imageUrlsBySize[90]
-                
+
                 // numberOfServings : recipe.numberOfServings
-            }   
+            }
 
             // Use the factory to POST to Firebase
             favoriteRecipeFactory.add(kidrecipe)
-            .then(() => {
-                $timeout(function (){
-                    console.log("the string")
-                    $location.url("/HomePageInformation/favoriteRecipes/" + $scope.kid)
-                }, 100) 
-               
-                // $scope.kid.firstName = ""
-                // $scope.ingredients.recipeName = ""
-                // $scope.ingredients.ingredientLines = ""
-                // $scope.ingredients.totalTime = ""
-                // $scope.ingredients.numberOfServings = ""
+                .then(() => {
+                    $timeout(function () {
+                        console.log("the string")
+                        $location.url("/HomePageInformation/favoriteRecipes/" + $scope.kid)
+                    }, 100)
 
-            })
-            
-            
+                    // $scope.kid.firstName = ""
+                    // $scope.ingredients.recipeName = ""
+                    // $scope.ingredients.ingredientLines = ""
+                    // $scope.ingredients.totalTime = ""
+                    // $scope.ingredients.numberOfServings = ""
+
+                })
+
+
 
         }
 
