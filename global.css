@@ -195,7 +195,7 @@ nav > ul > span {
 .navigation {
     font-family: 'Barlow', sans-serif;
     background-color: #476EAF;
-    box-shadow: 0px -12px 4px 1px rgba(0, 0, 0, .2);  
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .2);  
     height: 170px;
     justify-content: space-between;
 }
@@ -563,6 +563,7 @@ color: purple;
      height: 900px; 
     background-repeat: no-repeat;
     background-size: cover;
+    /* opacity: .5; */
  
     
     /* margin-top: 200px; */
@@ -636,6 +637,10 @@ color: purple;
     color:white;
  }
 
+ #recipeName {
+     font: 30px;
+ }
+
 /* when someone clicks the search bar this will style the recipes that are displayed */
 .listOfRecipes{
     margin-top: 60px;
@@ -650,6 +655,7 @@ color: purple;
     /* padding-top: 80px; */
     /* border: 1px solid darken(grey, 5%); */
     background-color: lightblue;
+    /* opacity: 0; */
     
     /* padding: 20px; */
     
