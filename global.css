@@ -95,12 +95,79 @@ body {
         outline: none;
       } */
     }
-    
-    
-  
-
 
 /* end register or log in page */
+
+
+/* registration Page
+
+/* registration Page */
+.registerForm{
+width: 800px;
+height:520px;
+margin-top: 40px;
+margin-left: 340px;
+margin-right: 200px;
+background-color: #C6D7F4;
+}
+
+
+#registrationForm{
+    text-align: center;
+    /* background-color: #698DCA;
+    height: 50px; */
+    /* padding-top: 40px; */
+    /* padding-bottom: 20px; */
+    /* padding-bottom: 30px; */
+}
+
+#childInformationH4{
+    margin-bottom: 0px;
+    padding:17px;
+    padding-bottom: 0;
+}
+
+.registrationFormInput { 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} 
+
+/* Set a style for all buttons */
+.registrationButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.registrationButton  {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.registrationcontainer {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* end registration page*/ */
 
 /* Navigation Styling: */
  nav > ul {
@@ -476,7 +543,39 @@ color: purple;
 }
 
 /* Health Page Styling */
+/* image*/
+/* #backgroundImage{ */
+    /* background-image: url("./app/HomePageInformation/images/foodNumber2.jpg"); */
+    /* content: " "; */
+    /* background-size: auto; */
+     /* height: 700px;  */
+    /* width:150vh;   */
+    /* background-color: #cccccc; */
+    /* width: 100%; */
+    /* margin-top: 200px; */
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+ /* } */
 
+
+
+/* image*/
+#backgroundImage{
+    background-image: url("./app/HomePageInformation/images/foodNumber2.jpg");
+    content: " ";
+    /* background-size: auto; */
+     height: 700px; 
+    /* width:150vh;   */
+    /* background-color: #cccccc; */
+    width: 100%;
+    /* margin-top: 200px; */
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+ }
+
+/* end image */
 /* search bar */
 .searchBar{
     border-style: inset;
@@ -509,7 +608,7 @@ color: purple;
     left: 13.5%;  
    
     /* margin-top: 50px; */
-    background-color:hsla(207, 84%, 23%, 0.090);
+    background-color:rgba(4, 8, 10, 0.945);
    
 }
 

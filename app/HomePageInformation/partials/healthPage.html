@@ -1,52 +1,65 @@
 <div>
-        <div>
-            <!-- Select the kids name: -->
-            <div class="stlyeSearchBar">
+    <div>
+        <!-- Select the kids name: -->
+        <div class="stlyeSearchBar">
             <!-- <br>Child Name: -->
-            
+
             <select class="searchBar1" ng-model="kid">
                 <option value="" disabled selected> Select a Child's Name</option>
                 <option ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}} </option>
             </select>
-    
+
             <!-- select your food allergy: -->
-            <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies" >
-                    <option value="" disabled selected> Select a Food Allergy</option>
+            <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
+                <option value="" disabled selected> Select a Food Allergy</option>
             </select>
-            
-    
-    
+
+
+
             <!-- Search for recipes -->
             <input class="searchBar" value=text ng-model="searchString" placeholder="    Type in an Ingredient or Meal Idea">
-        
-    
+
+
             <!-- Create a Search Button that takes both the filtered allergy and the search form -->
-            <button class= "searchRecipeButtonn" ng-click="searchRecipe(selectedAllergy)">Search</button>
-           </div>
-    
-             <!-- name of nannydo in the middle of the page -->
-        
-                    <!-- <h2>Nannydo</h2> -->
+            <button class="searchRecipeButtonn" ng-click="searchRecipe(selectedAllergy)">Search</button>
+        </div>
+
+        <!-- name of nannydo in the middle of the page -->
+
+        <!-- <h2>Nannydo</h2> -->
+        <!-- insert an image -->
+        <!-- <div class="foodPic" ng-init="foodPic ='food(2).jpg'">              
+            <img ng-src="{{foodPic}">
+        </div> -->
+        <!-- <div> -->
+          
+            <div id="backgroundImage">
+                <!-- <img ng-src="food(2).jpg" alt="Description" /> -->
+                <!-- <img ng-src="{{food(2).jpg}}" /> -->
+
+          
+         
                
-            <!-- List the Recipes -->
-            <div> 
+                <!-- end image information -->
+                <!-- List the Recipes -->
+
                 <ul class="listOfRecipes" ng-repeat="recipe in Recipes">
-                    <li> 
+                    <li>
                         <br>
                         <strong>{{ recipe.recipeName }}</strong>
-    
+
                     </li>
                     <!-- nested ng-repeat to grab the ingredients -->
                     <!-- <div ng-repeat="ingredient in recipe.ingredients">
                         {{ingredient}}
                     </div> -->
-                 
+
                     <img class="card__title" src="{{recipe.imageUrlsBySize[90]}}" />
                     <br>
                     <!-- Add to my favorite meal list -->
                     <br>
                     <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button>
-                  
+
                     <div ng-show="selected === $index">
                         <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
                             {{ingredient}}
@@ -61,17 +74,16 @@
                         <br>
                         <strong>Prep Time:</strong> {{ingredients.totalTime}}
                     </div>
-                   
-                
-                <!-- cards -->
-    
+
+
+                    <!-- cards -->
+
                     <!-- Save to my favorites Button -->
                     <br>
                     <button ng-click="saveFavoriteRecipe(recipe)">Add to My Favorite Meal List!</button>
                 </ul>
             </div>
             <!-- </div> -->
-    
+
         </div>
     </div>
-    

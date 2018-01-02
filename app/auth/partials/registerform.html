@@ -1,6 +1,8 @@
 <!-- Registration Form for first time Users (Parents Only) -->
+<!-- input[type=text], input[type=password]  -->
 
-<h2>Registration Form</h2>
+<form class="registerForm" style="border:2px solid #ccc">
+<h2 id="registrationForm" >Registration Form</h2>
 <!-- <form>
     <!-- Parent Information: -->
 <!-- <h4>Parent & Guardian Information:</h4> -->
@@ -16,62 +18,62 @@
 <!-- </div> -->
 <!-- </form>  -->
 <!-- Kid Information: -->
-<h4>Your Child's Information:</h4>
-<form>
+<h4 id="childInformationH4">  Your Child's Information:</h4> 
+    <div class="registrationcontainer">
     <!-- first Child -->
     <!-- upload an image -->
-   <div class="image-upload">
+   <!-- <div class="image-upload">
         <label for="file-input">
             <img src="placeholder.jpg" />
         </label>
 
         <input id="file-input" type="file" ng-model="kid.image"/>
-    </div> 
+    </div>  -->
     <div>
         <!-- make required -->
         First name:
-        <input type="text" ng-model="kid.firstName">
-    </div>
-
-    <div>
-        <!-- make required -->
-        Age:
-        <select name="age" ng-model="kid.age">
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-        </select>
+        <input class="registrationFormInput" type="text" ng-model="kid.firstName">
     </div>
 
 
     <!-- Birthday: -->
     <div>
         Birthday:
-        <input type="text" ng-model="kid.birthday">
+        <input class="registrationFormInput" type="text" ng-model="kid.birthday">
     </div>
 
     <!-- Interests -->
     <div>
         Interests:
-        <input type="text" ng-model="kid.interests">
+        <input class="registrationFormInput" type="text" ng-model="kid.interests">
 
     </div>
+
+    <div>
+            <!-- make required -->
+            Age:
+            <select name="age" ng-model="kid.age">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+            </select>
+        </div>
     <!-- Allergies -->
     <div>
         Food Allergies:
@@ -100,15 +102,16 @@
             <option value="Male">Male</option>
             <!-- <option value="Other">Other</option> -->
         </select>
-        <br>
-        <button id="saveChild" ng-click="saveChild()">Save this Child?</button>
+        <br><br>
+        <button  ng-click="saveChild()">Save this Child?</button>
         <!-- <button id="mybutton" ng-click="myvalue=true">Add another Child?</button> -->
         <br>
     </div>
-</form>
+
 
 <!-- Final Button to save the Data -->
 <br>
-<button ng-click="registerInDatabase()">Register My Family!</button>
+<button id="registrationButton" ng-click="registerInDatabase()">Register My Family!</button>
+</div>
 </form>
 
