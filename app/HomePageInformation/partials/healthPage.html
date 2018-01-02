@@ -29,47 +29,38 @@
         <div id="backgroundImage">
             <!-- end image information -->
 
-            <!-- flip card info -->
-
-            <!-- flip card info ends -->
-
             <!-- List the Recipes -->
             <ul class="listOfRecipes" ng-repeat="recipe in Recipes">
                 <!-- flip -->
                 <section class="recipeContainer">
-                    <!-- <div id="recipeInfoCard"> -->
-                        <!-- flip -->
 
-                        <figure class="frontOfRecipeCard" ng-click="seeIngredients(recipe.id, $index)">
-                            <!-- <div ng-show="showMe"> -->
+                    <!-- front side of the card -->
+                    <figure class="frontOfRecipeCard" ng-click="seeIngredients(recipe.id, $index)">
+                        <!-- <div ng-show="showMe"> -->
                         <div ng-hide="selected === $index">
-                                
-                                <!-- <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button> -->
-                                <li>
-                                    <br>
-                                    <strong id="recipeName">{{ recipe.recipeName }}</strong>
 
-                                </li>
-                                <!-- nested ng-repeat to grab the ingredients -->
-                                <!-- <div ng-repeat="ingredient in recipe.ingredients">
+                            <!-- <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button> -->
+                            <li>
+                                <br>
+                                <strong id="recipeName">{{ recipe.recipeName }}</strong>
+                                <br>
+                            </li>
+                            <!-- nested ng-repeat to grab the ingredients -->
+                            <!-- <div ng-repeat="ingredient in recipe.ingredients">
                         {{ingredient}}
                     </div> -->
 
-                                <img class="card__title" src="{{recipe.imageUrlsBySize[90]}}" />
-                                <br>
-                                <!-- Add to my favorite meal list -->
-                                <br>
-                            </div>
-                            <!-- </div> -->
-                        </figure>
+                            <img class="card__title" src="{{recipe.imageUrlsBySize[90]}}" />
+                            <br>
+                            <!-- Add to my favorite meal list -->
+                            <br>
+                        </div>
 
-                        <!-- end flip card -->
-                    <!-- </div> -->
-                    <!-- end flip card -->
+                    </figure>
 
-
-                    <figure class="backOfRecipeCard" >
-                            <!-- <div ng-show="hideMe"> -->
+                    <!-- back side of the card -->
+                    <figure class="backOfRecipeCard">
+                        <!-- <div ng-show="hideMe"> -->
                         <div ng-show="selected === $index">
                             <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
                                 {{ingredient}}
