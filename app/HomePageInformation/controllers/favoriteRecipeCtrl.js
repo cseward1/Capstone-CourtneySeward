@@ -1,5 +1,5 @@
 angular.module("CapstoneApp")
-    .controller("favoriteRecipeCtrl", function (favoriteRecipeFactory, healthFactory, AllergyFactory, kidsFactory, $scope, $location, $routeParams, $timeout) {
+    .controller("favoriteRecipeCtrl", function (favoriteRecipeFactory, healthFactory, AllergyFactory, kidsFactory, $scope, $location, $routeParams, $timeout, $window) {
 
 
         //   Use the factory to get the favorite meal and kid id:
@@ -40,8 +40,10 @@ angular.module("CapstoneApp")
         }
 
         // get the delete button to work:
-        $scope.deleteFavoriteMeal = () =>
-            favoriteRecipeFactory.murder($routeParams.kidid).then(() =>
-                $location.url("/"))
+        $scope.deleteFavoriteMeal = (param) =>
+            favoriteRecipeFactory.murder(param).then(() =>
+                // $location.url("/"))
+                $window.location.reload());
+
 
     })

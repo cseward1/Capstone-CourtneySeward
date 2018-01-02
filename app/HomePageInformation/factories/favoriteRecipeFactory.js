@@ -69,7 +69,7 @@ angular.module("CapstoneApp")
             .then(idToken => {
                     return $http({
                         method: "DELETE",
-                        url: `https://capstone1-2f9f6.firebaseio.com/recipe/.json?auth=${idToken}`})
+                        url: `https://capstone1-2f9f6.firebaseio.com/recipe/${recipe}/.json?auth=${idToken}`})
                     }).then(response => {
                         return response.data
                     })
