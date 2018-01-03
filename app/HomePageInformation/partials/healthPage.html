@@ -42,7 +42,7 @@
                             <!-- <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button> -->
                             <li class="recipeName">
                                 <strong>{{ recipe.recipeName }}</strong>
-            
+
                             </li>
                             <!-- nested ng-repeat to grab the ingredients -->
                             <!-- <div ng-repeat="ingredient in recipe.ingredients">
@@ -60,7 +60,13 @@
                     <!-- back side of the card -->
                     <figure class="backOfRecipeCard">
                         <!-- <div ng-show="hideMe"> -->
+                      
+
                         <div ng-show="selected === $index">
+                                <li class="recipeName">
+                                        <strong>{{ recipe.recipeName }}</strong>
+            
+                                    </li>
                             <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
                                 {{ingredient}}
                                 <br>
@@ -85,7 +91,6 @@
                 <!-- cards -->
 
                 <!-- Save to my favorites Button -->
-                <br>
                 <button ng-click="saveFavoriteRecipe(recipe)">Add to My Favorite Meal List!</button>
             </ul>
         </div>

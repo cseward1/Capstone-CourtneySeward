@@ -16,7 +16,7 @@ body {
     min-width: 320px;
     max-width: 475px;
     background: #fff;
-    /* position: absolute; */
+    position: fixed;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
@@ -104,19 +104,29 @@ body {
 
 /* registration Page */
 .registerForm{
-width: 800px;
+width: 750px;
 height:520px;
 margin-top: 40px;
 margin-left: 340px;
 margin-right: 200px;
+margin-bottom: 200px;
 background-color: #C6D7F4;
 }
 
+.registerPage{
+    background-color: rgba(255, 162, 0, 0.096);
+    height:900px;
+    width:auto;
+    padding-top: 20px;
+}
 
 #registrationForm{
     text-align: center;
-    /* background-color: #698DCA;
-    height: 50px; */
+    font:'Barlow', sans-serif;
+     background-color: #698DCA;
+    height: 60px;
+    margin:0;
+    padding-top: 10px;
     /* padding-top: 40px; */
     /* padding-bottom: 20px; */
     /* padding-bottom: 30px; */
@@ -605,12 +615,7 @@ border: 2.5px solid rgb(182, 120, 13);
     color:white;
  }
 
- .recipeName {
-     font: 35px;
-     font-family: 'Barlow',  sans-serif;
-     padding:10px
-     
- }
+
 
 
  /* image*/
@@ -657,6 +662,13 @@ border: 2.5px solid rgb(182, 120, 13);
         justify-content: center;
         justify-content: center;
 
+}
+
+.recipeName {
+    font: 35px;
+    font-family: 'Barlow',  sans-serif;
+    padding:10px
+    
 }
 /* end favorite recipe page */
 /* Health Page: */
