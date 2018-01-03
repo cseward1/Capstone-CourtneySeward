@@ -630,12 +630,13 @@ border: 2.5px solid rgb(182, 120, 13);
 
  
  
-
+/* favorite Recipe Page */
 /* when someone clicks the search bar this will style the recipes that are displayed */
 .listOfRecipes{
         /* background: rgba(100,149,237,0); */
         margin-top: 30px;
         margin-bottom: 30px;
+        margin-left:60px;
         display: inline-block;
         width: 250px;
         height: 300px;
@@ -645,18 +646,39 @@ border: 2.5px solid rgb(182, 120, 13);
         text-align: center;
         font-weight: bold;
         font: 35px;
-        padding-top: 0px;
-        /* border: 1px solid darken(grey, 5%); */
-        /* background-color: rgba(210, 213, 216, 0.822); */
-        background-color:rgba(211, 207, 204, 0.952);
-        /* text-align: center; */
-        /* z-index: 80; */
-        /* opacity: 0; */
-         /* padding:20; */
+        padding-top: -20px;
         
-        padding: 45px;
-        padding-right: 80px;
-        margin-left:60px;
+        background-color:rgba(211, 207, 204, 0.952);
+        
+        /* padding: 45px; */
+        padding-right: 120px;
+        padding-left: 20px;
+      padding-bottom: 30px;
+        justify-content: center;
+        justify-content: center;
+
+}
+/* end favorite recipe page */
+/* Health Page: */
+img {
+    width:250px;
+    height:200px;
+
+}
+.recipe{
+    list-style-type: none;
+    font:35px;
+
+}
+
+.recipeName{
+    list-style-type: none;
+    /* font:35px; */
+
+}
+
+.recipeBuilder{
+    justify-content: center;
 
 }
 
@@ -676,8 +698,8 @@ border: 2.5px solid rgb(182, 120, 13);
 
 /* start flip card  */
 .recipeContainer { 
-    width: 240px;
-    height: 260px;
+    width: 350px;
+    height: 300px;
     position: relative;
     perspective: 800px;
     text-align: center;
@@ -720,7 +742,30 @@ visibility: hidden;
 
 /* favorite recipe page*/
 .listOfFavoriteRecipes{
-    margin-top: 60px;
+        /* background: rgba(100,149,237,0); */
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left:60px;
+        display: inline-block;
+        width: 250px;
+        height: 300px;
+        margin: 2em;
+        list-style-type: none;
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font: 35px;
+        padding-top: -20px;
+        
+        background-color:rgba(211, 207, 204, 0.952);
+        
+        /* padding: 45px; */
+        padding-right: 60px;
+        padding-left: 60px;
+      padding-bottom: 30px;
+        justify-content: center;
+
+    /* margin-top: 60px;
     display: inline-block;
     width: 200px;
     height: 100px;
@@ -728,7 +773,7 @@ visibility: hidden;
     list-style-type: none;
     font-family: 'Barlow', sans-serif;
     text-align: center;
-    font-weight: bold;
+    font-weight: bold; */
     /* padding-top: 80px; */
     /* padding: 20px; */
     
@@ -822,28 +867,7 @@ list-style: none
 
 
 
-/* Health Page: */
-img {
-    width:210px;
-    height:200px;
 
-}
-.recipe{
-    list-style-type: none;
-    font:35px;
-
-}
-
-.recipeName{
-    list-style-type: none;
-    /* font:35px; */
-
-}
-
-.recipeBuilder{
-    justify-content: center;
-
-}
 
 
 
