@@ -277,3 +277,18 @@
 
     </div>
 </div>
+
+
+ /* image*/
+#backgroundImage{
+    background-image: url("./app/HomePageInformation/images/foodNumber2.jpg");
+   
+    content: " ";
+     height: 430px; 
+    width: auto;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    image-rendering: auto;
+    
+    /* opacity: .5; */
+ }

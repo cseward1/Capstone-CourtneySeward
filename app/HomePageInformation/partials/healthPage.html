@@ -40,16 +40,15 @@
                         <div ng-hide="selected === $index">
 
                             <!-- <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button> -->
-                            <li>
-                                <br>
-                                <strong id="recipeName">{{ recipe.recipeName }}</strong>
-                                <br>
+                            <li class="recipeName">
+                                <strong>{{ recipe.recipeName }}</strong>
+            
                             </li>
                             <!-- nested ng-repeat to grab the ingredients -->
                             <!-- <div ng-repeat="ingredient in recipe.ingredients">
                         {{ingredient}}
                     </div> -->
-
+                            <br>
                             <img class="card__title" src="{{recipe.imageUrlsBySize[90]}}" />
                             <br>
                             <!-- Add to my favorite meal list -->

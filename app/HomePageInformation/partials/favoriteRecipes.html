@@ -14,8 +14,9 @@
             <div ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}}
 
             </div> -->
+           
             <div id="backgroundImage">
-                    <button ng-click="backtoHealthPage()">Take me back to the health page</button>
+                    <button id="goBackToHealthPageButton" ng-click="backtoHealthPage()">Take me back to the health page</button>
     <div>
 
         <!-- Grab the Recipe Name -->
@@ -32,7 +33,7 @@
                 <!-- <strong>{{ <recipe class="firstName"></recipe> }}:</strong> -->
             <!-- </li>  -->
             <!-- Grab the image -->
-            <img src="{{recipe.foodImage}}" />
+            <img class="card__title" src="{{recipe.foodImage}}" />
             <br>
             <button ng-click=showIngredients(recipe.id)>Show the Ingredients</button>
             <span ng-hide="showIngredientz">

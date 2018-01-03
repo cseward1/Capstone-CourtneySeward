@@ -442,7 +442,7 @@ padding-bottom: 50px;
 
 .homepageh2 {
     font-family: 'Barlow', sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 0;
 
     /* margin-top:0; */
@@ -605,26 +605,37 @@ border: 2.5px solid rgb(182, 120, 13);
     color:white;
  }
 
- #recipeName {
-     font: 30px;
+ .recipeName {
+     font: 35px;
+     font-family: 'Barlow',  sans-serif;
+     padding:10px
+     
  }
 
 
  /* image*/
 #backgroundImage{
-    background-image: url("./app/HomePageInformation/images/foodNumber2.jpg");
+    background-image: url("./app/HomePageInformation/images/food(4).jpg");
    
     content: " ";
-     height: 1300px; 
-    background-repeat: no-repeat;
+     height: 1730px; 
+
+    width: auto;
+    /* background-repeat: no-repeat; */
     background-size: cover;
+    /* image-rendering: auto; */
+    
     /* opacity: .5; */
  }
+
+ 
+ 
 
 /* when someone clicks the search bar this will style the recipes that are displayed */
 .listOfRecipes{
         /* background: rgba(100,149,237,0); */
-        margin-top: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: inline-block;
         width: 250px;
         height: 300px;
@@ -633,18 +644,28 @@ border: 2.5px solid rgb(182, 120, 13);
         font-family: 'Barlow', sans-serif;
         text-align: center;
         font-weight: bold;
-        /* padding-top: 80px; */
+        font: 35px;
+        padding-top: 0px;
         /* border: 1px solid darken(grey, 5%); */
-        background-color:rgba(173, 221, 230, 0.747); 
+        /* background-color: rgba(210, 213, 216, 0.822); */
+        background-color:rgba(211, 207, 204, 0.952);
         /* text-align: center; */
         /* z-index: 80; */
         /* opacity: 0; */
          /* padding:20; */
         
-        padding: 20px;
+        padding: 45px;
+        padding-right: 80px;
+        margin-left:60px;
 
 }
 
+/* .card__title{
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+} */
+/* back of card */
 .backOfRecipeCards {
     width: 250px;
     height: 300px;
@@ -713,6 +734,14 @@ visibility: hidden;
     
 }
 
+#goBackToHealthPageButton{
+    margin-top: 20px;
+    margin-left: 1200px;
+    height:50px;
+    background-color: rgb(248, 246, 246);
+    /* font: white; */
+    /* float:right; */
+}
 
 /* end favorite recipe page */
 
@@ -795,17 +824,19 @@ list-style: none
 
 /* Health Page: */
 img {
-    width:200px;
-    height:160px;
+    width:210px;
+    height:200px;
 
 }
 .recipe{
     list-style-type: none;
+    font:35px;
 
 }
 
 .recipeName{
     list-style-type: none;
+    /* font:35px; */
 
 }
 
