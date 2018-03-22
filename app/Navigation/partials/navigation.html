@@ -1,0 +1,17 @@
+
+<ul ng-controller="NavCtrl" class="navigation">
+        <span ng-if="isAuthenticated()">
+         <li><a class="homePage" href="/#!/HomePageInformation/homePage">Home</a></li>
+        <li><a class="healthPage" href="/#!/HomePageInformation/healthPage">Health</a></li>
+        <!-- <li><a href="/#!/HomePageInformation/favoriteRecipes">Favorite Recipes</a></li> -->
+        <li><a class="errandPage" href="/#!/HomePageInformation/errands">Errands</a></li>
+        <!-- <li><a class="errandPage" href="/register">Er</a></li> -->
+        <li class="align-right">
+                
+                     <a class="logOutButton" href="#" ng-click="logout()">Logout <span>{{ email }}</span></a>
+                    </li>
+ 
+            </span>
+            <!-- <span ng-if="!isAuthenticated()"></span> -->
+       
+    </ul>

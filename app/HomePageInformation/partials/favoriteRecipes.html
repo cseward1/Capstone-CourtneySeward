@@ -1,0 +1,56 @@
+<!-- this page will display each kids list of favorite foods: -->
+
+
+    
+
+    <!-- Grab the kids name from firebase: -->
+    <!-- <div>
+        <strong>Name:</strong> {{ kid.firstName }}
+        <br>
+    </div> -->
+        <!-- <h3 id="recipeBuilder">Recipe Builder</h3> -->
+        <!-- <br>Child Name:
+        <select ng-model="kid">
+            <div ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}}
+
+            </div> -->
+           
+            <div id="backgroundImage">
+                    <button id="goBackToHealthPageButton" ng-click="backtoHealthPage()">Take me back to the health page</button>
+    <div>
+
+        <!-- Grab the Recipe Name -->
+        <ul class="listOfFavoriteRecipes" ng-repeat="recipe in recipes" >
+            <li class="recipeName">
+                <br>
+                <strong>{{ recipe.recipeName }}</strong>
+            </li>
+     
+
+            <!-- Grab the total time for the recipe to cook/make: -->
+            <!-- <li class="recipeName">
+                <br>
+                <!-- <strong>{{ <recipe class="firstName"></recipe> }}:</strong> -->
+            <!-- </li>  -->
+            <!-- Grab the image -->
+            <img src="{{recipe.foodImage}}" />
+            <br>
+            <button ng-click=showIngredients(recipe.id)>Show the Ingredients</button>
+            <span ng-hide="showIngredientz">
+                <div ng-show="showStuff" ng-repeat="ingredient in recipe.ingredients track by $index">
+                    {{ingredient}}
+                    <br>
+                </div>
+            </span>
+            <!-- create a button that deletes a favorite meal from the list: -->
+            <div>
+                <button ng-click=deleteFavoriteMeal(recipe.id)>Delete this meal</button>
+            </div>
+            <!-- End delete button now -->
+
+        </ul>
+
+    </div>
+    </div>
+
+    <!-- closing divs -->

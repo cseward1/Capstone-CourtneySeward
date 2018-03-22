@@ -1,0 +1,936 @@
+
+
+body {
+        margin:0;
+        padding:0; 
+        margin:0; 
+        padding:0; 
+        height: 100%;
+        /* height:100%;     */
+}
+
+/* register or login page */
+
+.log-form {
+    width: 90%;
+    min-width: 320px;
+    max-width: 475px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+    
+    box-shadow: 0px 5px 10px rgba(0,0,0,.25);}
+    
+    /* @media(max-width: 40em){
+      width: 95%;
+      position: relative;
+      margin: 2.5% auto 0 auto;
+      left: 0%;
+    -webkit-transform: translate(0%,0%);
+  -moz-transform: translate(0%,0%);
+  -o-transform: translate(0%,0%);
+  -ms-transform: translate(0%,0%);
+  transform: translate(0%,0%);
+    } */
+    
+    .logInForm {
+      display: block;
+      width: 80%;
+      padding: 2em;
+    }
+    
+    .h2Login {
+      width: 88.70%;
+      color: #1D3E76;
+      font-family: 'open sans condensed';
+      font-size: 1.35em;
+      display: block;
+      background:  #799fe733;
+      /* width: 100%; */
+      text-transform: uppercase;
+      padding: .75em 1em .75em 1.5em;
+      box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+      border: 1px solid darken(grey, 5%);
+      /* text-shadow: 0px 1px 1px darken(grey, 5%); */
+      margin: 0;
+      font-weight: 200;
+    }
+    
+    .logininput {
+      display: block;
+      margin: auto auto;
+      width: 100%;
+      margin-bottom: 2em;
+      padding: .5em 0;
+      border: none;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 1.25em;
+      color: #757575;
+      /* &:focus {
+        outline: none;
+      } */
+    }
+    
+    .btn {
+      display: inline-block;
+      background: blue;
+      border: 1px solid darken(blue, 5%);
+      padding: .5em 2em;
+      color: white;
+      margin-right: .5em;
+      box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
+      /* &:hover {
+        background: lighten(@blue, 5%);
+      }
+      &:active {
+        background: @blue; 
+        box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
+      }
+      &:focus {
+        outline: none;
+      } */
+    }
+
+/* end register or log in page */
+
+
+/* registration Page
+
+/* registration Page */
+.registerForm{
+width: 750px;
+height:520px;
+margin-top: 40px;
+margin-left: 340px;
+margin-right: 200px;
+margin-bottom: 200px;
+background-color: #C6D7F4;
+}
+
+.registerPage{
+    background-color: rgba(255, 162, 0, 0.096);
+    height:900px;
+    width:auto;
+    padding-top: 20px;
+}
+
+#registrationForm{
+    text-align: center;
+    font:'Barlow', sans-serif;
+     background-color: #698DCA;
+    height: 60px;
+    margin:0;
+    padding-top: 10px;
+    /* padding-top: 40px; */
+    /* padding-bottom: 20px; */
+    /* padding-bottom: 30px; */
+}
+
+#childInformationH4{
+    margin-bottom: 0px;
+    padding:17px;
+    padding-bottom: 0;
+}
+
+.registrationFormInput { 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+} 
+
+/* Set a style for all buttons */
+.registrationButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.registrationButton  {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.registrationcontainer {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* end registration page*/ */
+
+/* Navigation Styling: */
+ nav > ul {
+     /* padding:60px; */
+    /* justify-content: center; */
+    justify-content: space-between;
+    display: block;
+
+}
+
+nav > ul > span > li {
+    display: inline;
+    list-style-type: none;
+    /* margin: 0 70px;  */
+    border: 30px black; 
+    justify-content: center;
+    /* margin-top: 40px;  */
+}
+
+nav > ul > span {
+    justify-content: center;
+    margin: 0;
+    /* padding-top: 40px; */
+}
+
+    
+.navigation {
+    font-family: 'Barlow', sans-serif;
+    background-color: #476EAF;
+    /* box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .2);   */
+    height: 170px;
+    justify-content: space-between;
+    margin:0;
+
+}
+
+/* begin footer */
+
+/* Footer Styling for Global CSS */
+.footerContent {
+    /* justify-content: space-between; */
+    background-color:#476EAF;
+    bottom: 0px; 
+    position: fixed; 
+    width: 100%;
+    height: 80px;
+}
+
+
+/* 
+footer p {
+    margin: 0;
+    color: #111312;    
+    font-size: .9em;  
+      font-style: 'Bellefair', serif; 
+      z-index: 20;}
+    
+    
+#contact {
+    text-align: left;
+}
+
+#hours {
+    text-align: center;
+}
+
+#copyright {
+    text-align: right;
+}
+
+.bold {
+    font-size:1.5em;
+} */
+/* end footer  */
+
+
+/* The "a" tags within the nav class are the elements that define the hyperlinks for the nav buttons */
+
+/* .HomePageBody {
+    height:100%
+} */
+.homePage {
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 32px;
+    margin-bottom: 72px;
+    /* padding: 0.9em 1.1em; */
+    padding: 20px;
+	border: 2.5px solid rgb(23, 152, 226);
+	color: white;
+    font-weight: 700;
+    /* padding-top: 20px; */
+   
+    /* margin-left: 200px; */
+}
+
+.homePage:hover {
+    background-color: rgba(231, 107, 5, 0.89);
+	opacity: 0.6;
+}
+    
+.healthPage{
+	text-decoration: none;
+	outline: none;
+    display: inline-block;
+    /* margin-left: 20px; */
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 32px;
+    margin-bottom: 72px;
+    padding:20px;
+	/* padding: 0.9em 1.1em; */
+	border: 2.5px solid rgb(23, 152, 226);
+	color:  white;
+    font-weight: 700;
+ 
+  
+}
+
+.healthPage:hover {
+    background-color:  rgba(231, 107, 5, 0.89);
+	opacity: 0.6;
+}
+
+.errandPage{
+	text-decoration: none;
+	outline: none;
+    display: inline-block;
+    padding: 20px;
+	/* margin-left: 200px; */
+	/* padding: 0.9em 1.1em; */
+	border: 2.5px solid rgb(23, 152, 226);
+	color:  white;
+    font-weight: 700;
+    /* padding-top: 20px; */
+    margin-left: 13px;
+    margin-right: 13px;
+    margin-top: 45px;
+    margin-bottom: 72px;
+}
+
+.errandPage:hover {
+    background-color: rgba(231, 107, 5, 0.89);
+	opacity: 0.6;
+}
+/* nav button styling ends */
+
+/* log out button */
+ /* .logOutButton { */
+    /* line-height: 32px; */
+    /* width: 60px; */
+    /* height: 30px; */
+    /* padding-bottom: 10px; */
+    /* font-size: 8pt; */
+    /* font-family: tahoma; */
+    /* margin-top: 40px; */
+    /* margin-right: 100px; */
+    /* padding: 20px; */
+    /* position:absolute; */
+    /* top:0; */
+    /* right:0; */
+/* }  */
+
+/* Log out button */
+/* .logOutButton {
+    display: top-left;
+
+} */
+
+.logOutButton{
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+   
+    padding:20px;
+	border: 2.5px solid rgb(23, 152, 226);
+	color: white;
+    font-weight: 700;
+    /* padding-top: 20px; */
+    margin-right: 70px; 
+    margin-top: 45px;
+    margin-bottom: 72px;
+    float: right;
+
+}
+
+.logOutButton:hover {
+    background-color: rgba(231, 107, 5, 0.89);
+	opacity: 0.6;
+}
+
+
+
+/* HomePagePartial */
+/* banner */
+#banner {
+    /* background-image: url(/images/kidsImage.jpg); */
+    background-position: center center;
+    background-size: cover;
+    /* color: #6632324f; */
+    color:#2D569B;
+    padding: 6em 0em 6em;
+    text-align: center;
+}
+
+    #banner :last-child {
+        margin-bottom: 0;
+    }
+
+    #banner h2 {
+        color:#2D569B;
+        /* color: #130d0d; */
+        font-size: 4em;
+        line-height: 1.25em;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+
+    #banner p {
+        font-size: 1.5em;
+        margin-bottom: 1.75em;
+    }
+
+
+/* Icon section of the home Page*/
+
+.section1 {
+    /* border: 1px black; */
+    /* background-color: rgba(218, 210, 210, 0.26); */
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* margin: 10px; */
+    height:300px;
+    width:auto;
+    background-color: #C6D7F4;
+   
+}
+.sectionOne{
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 500px; */
+    display: inline;
+    justify-content: center;
+
+}
+
+/* .taskList{
+display: inline-block;
+height:25px;
+padding-bottom: 50px;
+
+} */
+.healthDetails {
+    font-size: 22px;
+    font-family: 'Barlow', sans-serif;
+}
+.errandDetails{
+    font-size: 22px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* .favoriteFoodDetails{
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+    margin: 0px;
+} */
+
+.homepageh2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 35px;
+    margin-bottom: 0;
+
+    /* margin-top:0; */
+}
+
+#homepageTitle {
+    font-family: 'Gloria Hallelujah', cursive;
+    /* color:rgb(161, 102, 12); */
+}
+
+.fa.fa-cutlery.fa-5x{
+    margin: 40px;
+    cursor:pointer;
+    
+}
+ 
+ .fa.fa-cutlery.fa-5x:hover {
+    /* background-color: rgb(88, 60, 139); */
+    color:rgb(161, 102, 12);
+ }
+
+
+.fa.fa-shopping-cart.fa-5x{
+    margin: 40px;
+    cursor:pointer;
+}
+ 
+.fa.fa-shopping-cart.fa-5x:hover {
+    /* background-color: rgb(88, 60, 139); */
+    color:rgb(161, 102, 12);
+ }
+
+.fa.fa-search.fa-5x{
+    margin:40px;
+    cursor:pointer;
+    /* margin-top: 40px; */
+    /* padding-top: 200px; */
+   
+}
+ 
+.fa.fa-search.fa-5x:hover {
+    /* background-color: rgb(88, 60, 139); */
+    color:rgb(161, 102, 12);
+ }
+
+.kidNames{
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+
+}
+
+
+.childNamesButton{
+    /* text-align: center; */
+    text-decoration: none;
+    font-size:20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: block;
+    color: rgb(182, 120, 13);
+    text-align: center;
+}
+.childNamesButton:hover {
+color: rgb(19, 9, 158);
+border: 2.5px solid rgb(182, 120, 13);
+ 
+}
+
+/* contanier css that holds the childs information */
+.HomePagecard {
+    box-shadow: 0 4px 8px 0 rgba(22, 4, 65, 0.2);
+    transition: 0.3s;
+    float: left;
+    width: 25%;
+     border-radius: 5px;
+     font-family: 'Gloria Hallelujah', cursive;
+}
+
+.HomePagecard:hover {
+    box-shadow: 0 70px 80px 0 rgba(12, 2, 48, 0.2);
+    
+}
+
+.HomePagecontainer {
+    margin-bottom: 20px;
+    padding: 2px 30px;
+    padding-bottom: 50px;
+}
+
+.kidInKidz{
+   height:20px;
+   width: 40px; 
+}
+
+
+
+/* Health Page Styling */
+
+/* search bar */
+.searchBar{
+    border-style: inset;
+    /* border-radius: 20px; */
+    height:35px;
+    width:400px;
+    margin-left: 10px;
+    /* padding: 5px; */
+    /* margin-left: 75px; */
+    font: 60px;
+    z-index: 800;
+    /* opacity: 0; */
+}
+
+.stlyeSearchBar{
+    /* font: 60px; */
+    /* border: inset; */
+    /* border-radius: 120px; */
+    padding-top: 21px;
+    padding-bottom: 21px;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    width:1465px;
+    /* position: absolute; */
+    height: 50px;
+    /* width: 400px; */
+    margin: -21px 40px 0px -20px;
+
+    top: 31%;
+    left: 13.5%;  
+   
+    /* margin-top: 50px; */
+    background-color:#A9C5EC;
+    border: 2.5px solid rgb(23, 152, 226);
+   
+}
+
+.searchBar1 {
+    margin-left: 50px;
+    /* height:35px; */
+    width:100px;
+    padding: 100px;
+    /* height: 10px; */
+}
+
+.searchRecipeButton{
+    width:100px;
+    height: 20px;
+    border-radius: 100px;
+}
+.searchRecipeButtonn{
+    border: 1px outset blue;
+    background-color: lightBlue;
+    height:40px;
+    width:60px;
+    cursor:pointer;
+}
+ 
+ .searchRecipeButtonn:hover {
+    background-color: rgb(88, 60, 139);
+    color:white;
+ }
+
+
+
+
+ /* image*/
+#backgroundImage{
+    background-image: url("./app/HomePageInformation/images/food(4).jpg");
+   
+    content: " ";
+     height: 1730px; 
+
+    width: auto;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* image-rendering: auto; */
+    
+    /* opacity: .5; */
+ }
+
+ 
+ 
+/* favorite Recipe Page */
+/* when someone clicks the search bar this will style the recipes that are displayed */
+.listOfRecipes{
+        /* background: rgba(100,149,237,0); */
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left:60px;
+        display: inline-block;
+        width: 250px;
+        height: 300px;
+        margin: 2em;
+        list-style-type: none;
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font: 35px;
+        padding-top: -20px;
+        
+        background-color:rgba(211, 207, 204, 0.952);
+        
+        /* padding: 45px; */
+        padding-right: 120px;
+        padding-left: 20px;
+      padding-bottom: 30px;
+        justify-content: center;
+        justify-content: center;
+
+}
+
+.recipeName {
+    font: 35px;
+    font-family: 'Barlow',  sans-serif;
+    padding:10px
+    
+}
+/* end favorite recipe page */
+/* Health Page: */
+img {
+    width:250px;
+    height:200px;
+
+}
+.recipe{
+    list-style-type: none;
+    font:35px;
+
+}
+
+.recipeName{
+    list-style-type: none;
+    /* font:35px; */
+
+}
+
+.recipeBuilder{
+    justify-content: center;
+
+}
+
+/* .card__title{
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+} */
+/* back of card */
+.backOfRecipeCards {
+    width: 250px;
+    height: 300px;
+}
+
+/* end search bar styling */
+
+
+/* start flip card  */
+.recipeContainer { 
+    width: 350px;
+    height: 300px;
+    position: relative;
+    perspective: 800px;
+    text-align: center;
+  }  
+
+#recipeInfoCard.flipped {
+    transform: translateX( -100% ) rotateY( -180deg );
+  }
+
+  .hide {
+visibility: hidden;
+  }
+
+/* end flip card */
+
+
+/* The component class creates space betweem the h2(the transparent text "Jackel Audio" and the section class that holds the reviews */
+.healthPagecomponent {
+	position: relative;
+	margin-bottom: 3em;
+	height: 30em;
+	background: rgba(0,0,0,0.09);
+	font-family: 'Lato', Arial, sans-serif;
+}
+/* Syling classes continued with Child Selectors */
+/* the component element selects all of its immediate "h2" children elements */
+.healthPagecomponent > h2 {
+	/* position: absolute; */
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 12em;
+	opacity: 0.12;
+	cursor: default;
+}
+
+/* favorite recipe page*/
+.listOfFavoriteRecipes{
+        /* background: rgba(100,149,237,0); */
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left:60px;
+        display: inline-block;
+        width: 250px;
+        height: 300px;
+        margin: 2em;
+        list-style-type: none;
+        font-family: 'Barlow', sans-serif;
+        text-align: center;
+        font-weight: bold;
+        font: 35px;
+        padding-top: -20px;
+        
+        background-color:rgba(211, 207, 204, 0.952);
+        
+        /* padding: 45px; */
+        padding-right: 60px;
+        padding-left: 60px;
+      padding-bottom: 30px;
+        justify-content: center;
+
+    /* margin-top: 60px;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+    list-style-type: none;
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    font-weight: bold; */
+    /* padding-top: 80px; */
+    /* padding: 20px; */
+    
+}
+
+#goBackToHealthPageButton{
+    margin-top: 20px;
+    margin-left: 1200px;
+    height:50px;
+    background-color: rgb(248, 246, 246);
+    /* font: white; */
+    /* float:right; */
+}
+
+/* end favorite recipe page */
+
+/* card display */
+/* .cardLabel {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+}
+
+    .card {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #FFF;
+        text-align: center;
+        line-height: 200px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    .card.back {
+        background: rgb(226, 108, 108);
+        color: rgb(49, 209, 34);
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+    .cardLabel:hover.card {
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+.hideAndShowinput {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+.cardLabel:hover:checked + .card {
+    transform: rotateX(160deg);
+    -webkit-transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(255,255,255,.2);
+} */
+
+/* Errand Partial */
+
+/* Styled Classes */
+.errandList {
+list-style: none
+}
+
+
+
+
+
+
+
+
+
+
+
+/* stars rating */
+ /* .txt-center {
+    text-align: center;
+  }
+  .hide {
+    display: none;
+  }
+  
+  .clear {
+    float: none;
+    clear: both;
+  }
+  
+  .rating {
+      width: 90px;
+      unicode-bidi: bidi-override;
+      direction: rtl;
+      text-align: center;
+      position: relative;
+  }
+  
+  .rating > label { 
+      float: right; 
+      display: inline;
+      padding: 0;
+      margin: 0;
+      position: relative; 
+      width: 1.1em;
+      cursor: pointer;
+      color: #000;
+  }
+  
+  .rating > label:hover,
+  .rating > label:hover ~ label,
+  .rating > input.radio-btn:checked ~ label {
+      color: transparent;
+  }
+  
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before,
+  .rating > input.radio-btn:checked ~ label:before {
+      content: "\2605";
+      position: absolute;
+      left: 0;
+      color: rgb(14, 13, 9); 
+   }  */
+  /* end stars rating */

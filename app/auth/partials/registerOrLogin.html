@@ -1,7 +1,14 @@
 <!-- Partial for the login/register page: -->
-<div>
-    <input type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
-    <input type="password" placeholder="Password" ng-model="auth.password">
-    <button ng-click="registerUser(auth)">Register</button>
-    <button ng-click="logMeIn(auth)">Login</button>
+<div class="log-form">
+        <h2 class="h2Login">Register & Login to your account </h2>
+        <form class="logInForm">
+    <input class="logininput" type="email" placeholder="Email address" ng-model="auth.email"  autofocus>
+    <input class="logininput" type="password" placeholder="Password" ng-model="auth.password">
+    <button class="btn"  ng-click="registerUser(auth)">Register</button>
+    <button class="btn" ng-click="logMeIn(auth)">Login</button>
+</form>
+
+    <!-- hide the nav bar -->
 </div>
+
+  

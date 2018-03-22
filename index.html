@@ -6,46 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello There!</title>
+
+    <!-- Calendar files needed -->
+    <!-- <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <script src='lib/jquery.min.js'></script>
+    <script src='lib/moment.min.js'></script>
+    <script src='fullcalendar/fullcalendar.js'></script> -->
+    <!-- Calender files end -->
+
+    <!-- Style Sheet: -->
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow|Gloria+Hallelujah|Indie+Flower" rel="stylesheet">
 </head>
-<!-- initiate Angular -->
+<!-- initiate Angular: -->
+
 <body ng-app="CapstoneApp">
 
-    <!-- creating a a log out button -->
+    <nav ng-include="'app/navigation/partials/navigation.html'"></nav>
+    
+
+    <!-- creating a a log out button: -->
     <!-- keep the logout button above the view so it will always display -->
     <nav ng-controller="AuthCtrl">
-        <button ng-click="logoutUser()">Logout</button>
+        <!-- <button ng-click="logoutUser()" class="logOutButton">Logout</button> -->
     </nav>
 
     <div ng-view></div>
+    <div ng-include="'app/navigation/partials/footer.html'"></div>
+
+    <!-- Add a footer:  -->
+    <!-- <nav ng-include="'app/navigation/partials/footer.html'"></nav> -->
+     <!-- Footer for all pages besides the index -->
 
 
     <!-- Scripts Begin: -->
     <!-- Scripts are assigned in a specific order: Angular, Angular Routing, App.js, Factories, and Controllers -->
-
     <!-- Require the Angular script-->
     <script src="./lib/node_modules/angular/angular.min.js"></script>
-    <!-- Require the Firebase Script -->
+
+    <!-- for the grouping on the errand partial: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+
+    <!-- Require the Firebase Script: -->
     <script src="./lib/node_modules/firebase/firebase.js"></script>
     <script src="./lib/node_modules/angular-route/angular-route.min.js"></script>
     <script src="./app/app.js"></script>
     <script src="./app/appConfig.js"></script>
 
-
     <!-- Factories: -->
     <script src="./app/auth/factories/AuthFactory.js"></script>
     <script src="./app/HomePageInformation/factories/homePageFactory.js"></script>
-    <script src= "./app/KidsInformation/factories/kidsFactory.js"></script>
+    <script src="./app/KidsInformation/factories/kidsFactory.js"></script>
+    <script src="./app/HomePageInformation/factories/ErrandFactory.js"></script>
+    <script src="./app/HomePageInformation/factories/healthFactory.js"></script>
+    <script src="./app/HomePageInformation/factories/AllergyFactory.js"></script>
+    <script src="./app/HomePageInformation/factories/favoriteRecipeFactory.js"></script>
+ 
 
     <!-- Controllers: -->
     <script src="./app/auth/controllers/AuthCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/homePageCtrl.js"></script>
-    <script src= "./app/auth/controllers/registerCtrl.js"></script>
+    <script src="./app/auth/controllers/registerCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/errandCtrl.js"></script>
     <script src="./app/HomePageInformation/controllers/healthCtrl.js"></script>
-    <script src="./app/HomePageInformation/controllers/nannylogCtrl.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidsCtrl.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidsList.js"></script>
-    <script src= "./app/KidsInformation/controllers/kidDetailCtrl.js"></script>
+    <script src="./app/HomePageInformation/controllers/favoriteRecipeCtrl.js"></script>
+    <script src="./app/KidsInformation/controllers/kidsCtrl.js"></script>
+    <script src="./app/KidsInformation/controllers/kidsList.js"></script>
+    <script src="./app/KidsInformation/controllers/kidDetailCtrl.js"></script>
+    <script src="./app/Navigation/controllers/NavCtrl.js"></script>
 
 </body>
+
 </html>

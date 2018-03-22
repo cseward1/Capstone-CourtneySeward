@@ -1,5 +1,100 @@
 <div>
-    <p>Health and Allergy Page</p>
+    <div>
+        <!-- Select the kids name: -->
+        <div class="stlyeSearchBar">
+            <!-- <br>Child Name: -->
+
+            <select class="searchBar1" ng-model="kid">
+                <option value="" disabled selected> Select a Child's Name</option>
+                <option ng-repeat="kid in kidz" value="{{kid.id}}">{{kid.firstName}} </option>
+            </select>
+
+            <!-- select your food allergy: -->
+            <select ng-model="selectedAllergy" ng-options="allergy.allergyName for allergy in allergies">
+                <option value="" disabled selected> Select a Food Allergy</option>
+            </select>
 
 
+
+            <!-- Search for recipes -->
+            <input class="searchBar" value=text ng-model="searchString" placeholder="    Type in an Ingredient or Meal Idea">
+
+
+            <!-- Create a Search Button that takes both the filtered allergy and the search form -->
+            <button class="searchRecipeButtonn" ng-click="searchRecipe(selectedAllergy)">Search</button>
+        </div>
+
+
+        <!-- background image -->
+        <div id="backgroundImage">
+            <!-- end image information -->
+
+            <!-- List the Recipes -->
+            <ul class="listOfRecipes" ng-repeat="recipe in Recipes">
+                <!-- flip -->
+                <section class="recipeContainer">
+
+                    <!-- front side of the card -->
+                    <figure class="frontOfRecipeCard" ng-click="seeIngredients(recipe.id, $index)">
+                        <!-- <div ng-show="showMe"> -->
+                        <div ng-hide="selected === $index">
+
+                            <!-- <button ng-click="seeIngredients(recipe.id, $index)">See the Ingredients</button> -->
+                            <li class="recipeName">
+                                <strong>{{ recipe.recipeName }}</strong>
+
+                            </li>
+                            <!-- nested ng-repeat to grab the ingredients -->
+                            <!-- <div ng-repeat="ingredient in recipe.ingredients">
+                        {{ingredient}}
+                    </div> -->
+                            <br>
+                            <img class="card__title" src="{{recipe.imageUrlsBySize[90]}}" />
+                            <br>
+                            <!-- Add to my favorite meal list -->
+                            <br>
+                        </div>
+
+                    </figure>
+
+                    <!-- back side of the card -->
+                    <figure class="backOfRecipeCard">
+                        <!-- <div ng-show="hideMe"> -->
+                      
+
+                        <div ng-show="selected === $index">
+                                <li class="recipeName">
+                                        <strong>{{ recipe.recipeName }}</strong>
+            
+                                    </li>
+                            <div ng-repeat="ingredient in ingredients.ingredientLines track by $index">
+                                {{ingredient}}
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <div ng-show="selected === $index">
+                            {{$index}}
+                            <strong>Number of Servings:</strong> {{ingredients.numberOfServings}}
+                            <br>
+                            <br>
+                            <strong>Prep Time:</strong> {{ingredients.totalTime}}
+                        </div>
+                        <!-- </div> -->
+                    </figure>
+                    <!-- flip card end divs -->
+
+                </section>
+                <!-- end flip card divs -->
+
+
+                <!-- cards -->
+
+                <!-- Save to my favorites Button -->
+                <button ng-click="saveFavoriteRecipe(recipe)">Add to My Favorite Meal List!</button>
+            </ul>
+        </div>
+        <!-- </div> -->
+
+    </div>
 </div>
