@@ -264,8 +264,8 @@ footer p {
 	text-decoration: none;
 	outline: none;
 	display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 13px;
+    margin-right: 13px;
     margin-top: 32px;
     margin-bottom: 72px;
     /* padding: 0.9em 1.1em; */
@@ -288,8 +288,8 @@ footer p {
 	outline: none;
     display: inline-block;
     /* margin-left: 20px; */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 13px;
+    margin-right: 13px;
     margin-top: 32px;
     margin-bottom: 72px;
     padding:20px;
@@ -317,8 +317,8 @@ footer p {
 	color:  white;
     font-weight: 700;
     /* padding-top: 20px; */
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 13px;
+    margin-right: 13px;
     margin-top: 45px;
     margin-bottom: 72px;
 }
